@@ -2,8 +2,9 @@
 return [
     // 文档标题
     'title'=>'APi接口文档',
+    'desc' => '本演示源码地址：https://github.com/HGthecode/thinkphp-apidoc-demo',
     // 版权申明
-    'copyright'=>'Powered By HG',
+    'copyright'=>'Powered By hg-code',
     //生成文档的控制器
     'controllers' => [
          'BaseDemo',
