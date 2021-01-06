@@ -8,9 +8,11 @@ use app\validate\IDInt;
 use app\services\Roster as RosterService;
 use app\Request;
 
+
 /**
  * @title 增删改查示例
  * @controller CrudDemo
+ * @group demo
  */
 class CrudDemo
 {

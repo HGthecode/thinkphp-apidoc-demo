@@ -6,9 +6,20 @@ namespace app\controller\v1;
 use app\services\ApiDoc as ApiDocService;
 use app\services\AuthFunction;
 
+// 如果使用了TP的注解扩展，出现annotation语法报错可use以下类消除
+//use hg\apidoc\annotation\explain\Title;
+//use hg\apidoc\annotation\explain\Desc;
+//use hg\apidoc\annotation\explain\Controller;
+//use hg\apidoc\annotation\explain\Author;
+//use hg\apidoc\annotation\explain\Url;
+//use hg\apidoc\annotation\explain\Tag;
+//use hg\apidoc\annotation\explain\Header;
+//use hg\apidoc\annotation\explain\Param;
+//use hg\apidoc\annotation\explain\ParamType;
 /**
  * @title 基础示例
  * @controller BaseDemo
+ * @group base
  */
 class BaseDemo
 {

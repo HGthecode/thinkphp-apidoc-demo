@@ -15,6 +15,10 @@ return [
         ['title'=>'V1.0','folder'=>'controller\\v1'],
         ['title'=>'V2.0','folder'=>'controller\\v2']
     ],
+    'groups'=>[
+        ['name'=>'base','title'=>'基础模块'],
+        ['name'=>'demo','title'=>'示例模块'],
+    ],
     // 是否开启缓存，开启后，如存在缓存数据优先取缓存数据，需手动更新接口参数，关闭则每次刷新重新生成接口数据
     'with_cache'=>false,
     // 统一的请求响应体
@@ -36,6 +40,8 @@ return [
     ],
     // 指定公共注释定义的文件地址
     'definitions'=>"app\controller\Definitions",
+    // 请求api前缀
+    'route_prefix'=>'apidoc',
     // 过滤、不解析的方法名称
     'filter_method'=>[
         '_empty',

@@ -6,9 +6,11 @@ namespace app\controller\v2;
 use app\services\ApiDoc as ApiDocService;
 use app\services\AuthFunction;
 
+
 /**
  * @title 基础示例
  * @controller BaseDemo
+ * @group base
  */
 class BaseDemo
 {

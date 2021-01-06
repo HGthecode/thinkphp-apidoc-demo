@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "hg/apidoc",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGthecode/thinkphp-apidoc.git",
-                "reference": "5a7e66eaae041414b8521debe9033e6f0ccfa209"
+                "reference": "a795f15015064a35a35a03b881161647a4fea321"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/5a7e66eaae041414b8521debe9033e6f0ccfa209",
-                "reference": "5a7e66eaae041414b8521debe9033e6f0ccfa209",
+                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/a795f15015064a35a35a03b881161647a4fea321",
+                "reference": "a795f15015064a35a35a03b881161647a4fea321",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -27,13 +27,16 @@
                 ]
             },
             "require": {
-                "php": ">=7.1.0"
+                "php": ">=5.6"
             },
             "type": "think-extend",
             "extra": {
                 "think": {
+                    "services": [
+                        "hg\\apidoc\\Service"
+                    ],
                     "config": {
-                        "apidoc": "config/apidoc.php"
+                        "apidoc": "src/config.php"
                     }
                 }
             },
@@ -52,7 +55,7 @@
                     "email": "376401263@qq.com"
                 }
             ],
-            "description": "thinkphp6 API文档自动生成",
+            "description": "thinkphp API文档自动生成",
             "keywords": [
                 "apidoc",
                 "api文档",
@@ -65,9 +68,9 @@
             ],
             "support": {
                 "issues": "https://github.com/HGthecode/thinkphp-apidoc/issues",
-                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v1.1.0"
+                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v1.1.1"
             },
-            "time": "2020-12-31T08:43:04+00:00"
+            "time": "2021-01-06T08:14:01+00:00"
         },
         {
             "name": "league/flysystem",
