@@ -4,15 +4,18 @@
 namespace app\model;
 
 use think\Model;
+use hg\apidoc\annotation\Field;
+use hg\apidoc\annotation\WithoutField;
+use hg\apidoc\annotation\AddField;
 
 class User extends BaseModel
 {
 
+
     /**
-     * @title 根据id获取明细
-     * @field id,username,nickname,state,sex
-     * @addField name:group_name type:string desc:会员组名称
-     * @addField name:role_name type:string desc:角色名称
+     * @field("id,username,nickname")
+     * @addField("openid",type="string",default="abc",desc="微信openid")
+     * @addField("senkey",type="string",default="key",desc="微信key")
      */
     public function getInfo($id){
         $res = $this->get($id);

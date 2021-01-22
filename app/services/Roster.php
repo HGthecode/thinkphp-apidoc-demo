@@ -36,7 +36,7 @@ class Roster
      * @throws \think\db\exception\ModelNotFoundException
      */
     public function getInfoById($id){
-        $res = (new RosterModel())->where('id',$id)->find();
+        $res = (new RosterModel())->withoutField(["delete_time"])->where('id',$id)->find();
         return $res;
     }
 

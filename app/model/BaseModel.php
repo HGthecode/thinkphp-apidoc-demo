@@ -4,6 +4,9 @@
 namespace app\model;
 
 use think\Model;
+use hg\apidoc\annotation\Field;
+use hg\apidoc\annotation\WithoutField;
+use hg\apidoc\annotation\AddField;
 
 class BaseModel extends Model
 {
@@ -11,8 +14,7 @@ class BaseModel extends Model
     protected  $deleteTime = 'delete_time';
 
     /**
-     * @title 根据查询条件获取当前模型的 分页列表
-     * @description 接口说明
+     * 根据查询条件获取当前模型的 分页列表
      */
     public function getList($where=[],$page=0,$limit=20,$field=[],$order=["id" => "desc"]) {
         $list = $this->where($where)->order($order)->field($field)->withoutField('delete_time')
@@ -21,8 +23,7 @@ class BaseModel extends Model
     }
 
     /**
-     * @title 根据id获取信息
-     * @withoutField delete_time
+     * @withoutField("delete_time")
      */
     public function getInfoById($id){
         $info = $this->where('id',$id)->withoutField(['delete_time'])->find();
