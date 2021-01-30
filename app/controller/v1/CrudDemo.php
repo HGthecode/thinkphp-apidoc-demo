@@ -96,7 +96,7 @@ class CrudDemo
      * @Apidoc\Author("HG")
      * @Apidoc\url("/v1/crudDemo/delete")
      * @Apidoc\method("DELETE")
-     * @param name:id type:int require:1 desc:唯一id
+     * @Apidoc\param("id",type="int",require=true,desc="唯一id")
      * @Apidoc\Returned("data",type="boolean",desc="删除状态")
      */
     public function delete(Request $request){
