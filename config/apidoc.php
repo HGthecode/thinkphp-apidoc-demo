@@ -36,7 +36,7 @@ return [
     // 权限认证配置
     'auth'               => [
         // 是否启用密码验证
-        'enable'     => true,
+        'enable'     => false,
         // 验证密码
         'password'   => "123456",
         // 密码加密盐

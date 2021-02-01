@@ -31,4 +31,20 @@ class ApiDoc
         $res=(new UserModel())->getList([],1,3);
         return $res;
     }
+
+    /**
+     * @Returned("list", type="array", ref="app\model\User\getInfo",desc="用户列表")
+     * @Returned("total", type="int", desc="关联数量")
+     */
+    public function getRefUserList(){
+
+    }
+
+    /**
+     * @Returned("user_data", type="array", ref="app\services\ApiDoc\getRefUserList",desc="关联用户数据")
+     * @Returned("info", type="object", ref="app\services\ApiDoc\getUserInfo",desc="用户信息")
+     */
+    public function getUserData(){
+
+    }
 }

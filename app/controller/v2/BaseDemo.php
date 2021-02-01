@@ -43,6 +43,7 @@ class BaseDemo
      * @Apidoc\Author("HG")
      * @Apidoc\url("/v2/baseDemo/definitions")
      * @Apidoc\method("GET")
+     * @Apidoc\header( ref="auth")
      * @Apidoc\param( ref="pagingParam")
      * @Apidoc\param("page",type="object", ref="pagingParam",desc="分页参数")
      * @Apidoc\Returned("list", type="array",ref="dictionary", desc="字典列表")
@@ -95,6 +96,18 @@ class BaseDemo
     }
 
     /**
+     * @Apidoc\title("多层数据引用")
+     * @Apidoc\Author("HG")
+     * @Apidoc\url("/v2/baseDemo/ref")
+     * @Apidoc\method("GET")
+     * @Apidoc\Returned("userData",type="object", ref="app\services\ApiDoc\getUserData" )
+     */
+    public function ref(){
+        $res = (new AuthFunction())->getTree();
+        return show(0,"",$res);
+    }
+
+    /**
      * @Apidoc\title("formdata参数")
      * @Apidoc\Author("HG")
      * @Apidoc\url("/v2/baseDemo/formdata")
@@ -107,6 +120,19 @@ class BaseDemo
      * @Apidoc\Returned("res", type="boolean",desc="保存状态")
      */
     public function formdata(){
+        return show(0,"",true);
+    }
+
+    /**
+     * @Apidoc\title("文件上传")
+     * @Apidoc\Author("HG")
+     * @Apidoc\url("/v2/baseDemo/upload")
+     * @Apidoc\method("POST")
+     * @Apidoc\paramType("formdata")
+     * @Apidoc\param("file",type="file", require=true,desc="附件")
+     * @Apidoc\Returned("url", type="string",desc="文件地址")
+     */
+    public function upload(){
         return show(0,"",true);
     }
 

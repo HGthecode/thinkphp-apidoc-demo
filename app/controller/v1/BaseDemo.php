@@ -43,6 +43,7 @@ class BaseDemo
      * @Apidoc\Author("HG")
      * @Apidoc\url("/v1/baseDemo/definitions")
      * @Apidoc\method("GET")
+     * @Apidoc\header( ref="auth")
      * @Apidoc\param( ref="pagingParam")
      * @Apidoc\param("page",type="object", ref="pagingParam",desc="分页参数")
      * @Apidoc\Returned("list", type="array",ref="dictionary", desc="字典列表")
@@ -52,6 +53,8 @@ class BaseDemo
         $list[]=["id"=>1,"name"=>"名称","value"=>"hello apidoc"];
         return show(0,"",$list);
     }
+
+
 
     /**
      * @Apidoc\title("引入逻辑层注释")
@@ -90,6 +93,18 @@ class BaseDemo
      * @Apidoc\Returned("userData", type="tree", ref="app\model\User\getInfo",desc="用户数据")
      */
     public function tree(){
+        $res = (new AuthFunction())->getTree();
+        return show(0,"",$res);
+    }
+
+    /**
+     * @Apidoc\title("多层数据引用")
+     * @Apidoc\Author("HG")
+     * @Apidoc\url("/v1/baseDemo/ref")
+     * @Apidoc\method("GET")
+     * @Apidoc\Returned("userData",type="object", ref="app\services\ApiDoc\getUserData" )
+     */
+    public function ref(){
         $res = (new AuthFunction())->getTree();
         return show(0,"",$res);
     }

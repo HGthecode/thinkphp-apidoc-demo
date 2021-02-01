@@ -5,6 +5,7 @@ namespace app\controller;
 
 use hg\apidoc\annotation\Param;
 use hg\apidoc\annotation\Returned;
+use hg\apidoc\annotation\Header;
 
 class Definitions
 {
@@ -30,6 +31,12 @@ class Definitions
      * @param("id",type="int",require=true,desc="唯一id")
      */
     public function getInfo(){}
+
+    /**
+     * @header("token",type="string",require=true,desc="身份票据")
+     * @header("shopid",type="string",require=true,desc="店铺id")
+     */
+    public function auth(){}
 
 
 }
