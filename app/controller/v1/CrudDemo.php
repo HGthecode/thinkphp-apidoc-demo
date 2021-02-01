@@ -10,21 +10,21 @@ use app\Request;
 use hg\apidoc\annotation as Apidoc;
 
 /**
- * @Apidoc\title("增删改查示例")
- * @Apidoc\group("demo")
+ * @Apidoc\Title("增删改查示例")
+ * @Apidoc\Group("demo")
  */
 class CrudDemo
 {
 
     /**
-     * @Apidoc\title("查询分页列表")
+     * @Apidoc\Title("查询分页列表")
      * @Apidoc\Desc("根据查询条件获取分页列表")
      * @Apidoc\Author("HG")
-     * @Apidoc\url("/v1/crudDemo/list")
-     * @Apidoc\method("GET")
-     * @Apidoc\param("keyword", type="string", desc="关键词" )
-     * @Apidoc\param("status", type="int", desc="状态" )
-     * @Apidoc\param( ref="pagingParam")
+     * @Apidoc\Url("/v1/crudDemo/list")
+     * @Apidoc\Method("GET")
+     * @Apidoc\Param("keyword", type="string", desc="关键词" )
+     * @Apidoc\Param("status", type="int", desc="状态" )
+     * @Apidoc\Param( ref="pagingParam")
      * @Apidoc\Returned(ref="pagingParam")
      * @Apidoc\Returned("data", type="array", ref="app\model\Roster\getList",withoutField="delete_time")
      */
@@ -40,11 +40,11 @@ class CrudDemo
     }
 
     /**
-     * @Apidoc\title("根据id查询信息")
+     * @Apidoc\Title("根据id查询信息")
      * @Apidoc\Author("HG")
-     * @Apidoc\url("/v1/crudDemo/info")
-     * @Apidoc\method("GET")
-     * @Apidoc\param( ref="getInfo")
+     * @Apidoc\Url("/v1/crudDemo/info")
+     * @Apidoc\Method("GET")
+     * @Apidoc\Param( ref="getInfo")
      * @Apidoc\Returned(ref="app\model\Roster\getInfoById")
      */
     public function info(Request $request){
@@ -58,11 +58,11 @@ class CrudDemo
 
 
     /**
-     * @Apidoc\title("新增")
+     * @Apidoc\Title("新增")
      * @Apidoc\Author("HG")
-     * @Apidoc\url("/v1/crudDemo/add")
-     * @Apidoc\method("POST")
-     * @Apidoc\param( ref="app\model\Roster\getInfoById",withoutField="id,create_time,update_time")
+     * @Apidoc\Url("/v1/crudDemo/add")
+     * @Apidoc\Method("POST")
+     * @Apidoc\Param( ref="app\model\Roster\getInfoById",withoutField="id,create_time,update_time")
      * @Apidoc\Returned(ref="app\model\Roster\getInfoById")
      */
     public function add(Request $request){
@@ -76,11 +76,11 @@ class CrudDemo
 
 
     /**
-     * @Apidoc\title("编辑")
+     * @Apidoc\Title("编辑")
      * @Apidoc\Author("HG")
-     * @Apidoc\url("/v1/crudDemo/edit")
-     * @Apidoc\method("PUT")
-     * @Apidoc\param( ref="app\model\Roster\getInfoById",withoutField="create_time,update_time")
+     * @Apidoc\Url("/v1/crudDemo/edit")
+     * @Apidoc\Method("PUT")
+     * @Apidoc\Param( ref="app\model\Roster\getInfoById",withoutField="create_time,update_time")
      * @Apidoc\Returned("data",type="boolean",desc="修改状态")
      */
     public function edit(Request $request){
@@ -92,11 +92,11 @@ class CrudDemo
     }
 
     /**
-     * @Apidoc\title("删除")
+     * @Apidoc\Title("删除")
      * @Apidoc\Author("HG")
-     * @Apidoc\url("/v1/crudDemo/delete")
-     * @Apidoc\method("DELETE")
-     * @Apidoc\param("id",type="int",require=true,desc="唯一id")
+     * @Apidoc\Url("/v1/crudDemo/delete")
+     * @Apidoc\Method("DELETE")
+     * @Apidoc\Param("id",type="int",require=true,desc="唯一id")
      * @Apidoc\Returned("data",type="boolean",desc="删除状态")
      */
     public function delete(Request $request){
