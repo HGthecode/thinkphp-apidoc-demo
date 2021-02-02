@@ -10,8 +10,8 @@ use hg\apidoc\annotation as Apidoc;
 
 
 /**
- * @Apidoc\title("基础示例")
- * @Apidoc\group("base")
+ * @Apidoc\Title("基础示例")
+ * @Apidoc\Group("base")
  */
 class BaseDemo
 {
@@ -25,7 +25,8 @@ class BaseDemo
      * @Apidoc\Header(
      *     "Authorization",
      *     require=true,
-     *     desc="Token"
+     *     desc="Token",
+     *     type="string",
      * )
      * @Apidoc\Param("username", type="string",require=true, desc="用户名" )
      * @Apidoc\Param("password", type="string",require=true, desc="密码" )
