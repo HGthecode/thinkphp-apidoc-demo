@@ -2,24 +2,20 @@
 return [
     // 文档标题
     'title'              => 'APi接口文档',
-    //
-    'desc'               => '本演示源码地址：https://github.com/HGthecode/thinkphp-apidoc-demo',
+    // 文档描述
+    'desc'               => '',
     // 版权申明
     'copyright'          => 'Powered By hg-code',
     // 设置可选版本
     'versions'           => [
-        ['title'=>'V1.0','folder'=>'app\controller\v1'],
-        ['title'=>'V2.0','folder'=>'app\controller\v2']
+        ['title'=>'V1.0','folder'=>''],
     ],
-    'groups'             => [
-        ['title'=>'基础模块','name'=>'base'],
-        ['title'=>'示例模块','name'=>'demo']
-    ],
+    // 控制器分组
+    'groups'             => [],
     // 指定公共注释定义的文件地址
-    'definitions'       => "app\controller\Definitions",
-    //生成文档的控制器
-    'controllers'        => [
-    ],
+    'definitions'        => "app\controller\Definitions",
+    //指定生成文档的控制器
+    'controllers'        => [],
     // 过滤，不解析的控制器
     'filter_controllers' => [],
     // 缓存配置
@@ -29,7 +25,7 @@ return [
         // 缓存文件路径
         'path'   =>  '../runtime/apidoc/',
         // 是否显示更新缓存按钮
-        'reload' => false,
+        'reload' => true,
         // 最大缓存文件数
         'max'    => 5,  //最大缓存数量
     ],
@@ -44,7 +40,6 @@ return [
     ],
     // 设置全局Authorize时请求头headers携带的key，对应token的key
     'global_auth_key'    => "Authorization",
-
     // 过滤、不解析的方法名称
     'filter_method'     => [
         '_empty',
@@ -66,17 +61,7 @@ return [
     // md文档
     'docs'              => [
         'menu_title' => '开发文档',
-        'menus'      => [
-            ['title'=>'md语法示例','path'=>'docs/Use'],
-            [
-                'title'=>'HTTP响应编码',
-                'items'=>[
-                    ['title'=>'status错误码说明','path'=>'docs/HttpStatus'],
-                    ['title'=>'code错误码说明','path'=>'docs/HttpCode_{:version}'],
-                ],
-            ]
-        ]
-
+        'menus'      => []
     ]
 
 ];

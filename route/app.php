@@ -10,12 +10,8 @@
 // +----------------------------------------------------------------------
 use think\facade\Route;
 
-Route::get('/', function () {
-    return 'hello,ThinkPHP ApiDoc！ 查看演示请访问 https://apidoc.demo.hg-code.com/apidoc/';
+Route::get('think', function () {
+    return 'hello,ThinkPHP6!';
 });
 
-Route::rule(':version/:controller/:action', ':version.:controller/:action');
-
-
-
-
+Route::get('hello/:name', 'index/hello');
