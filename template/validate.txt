@@ -1,0 +1,17 @@
+<?php
+namespace ${validate.namespace};
+
+use app\common\validate\BaseValidate;
+
+class ${validate.class_name} extends  BaseValidate {
+    protected $rule = ${validate.rule}
+
+    protected $message = ${validate.message}
+
+    protected $scene = [
+        'add'  =>  ${validate.scene.add},
+        'edit'  =>  ${validate.scene.edit},
+        'delete'  =>  ${validate.scene.delete},
+    ];
+
+}

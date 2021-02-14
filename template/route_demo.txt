@@ -1,0 +1,6 @@
+Route::rule(':version/${api_class_name}/pagelist', ':version.${controller.class_name}/pagelist', 'GET')->allowCrossDomain();
+Route::rule(':version/${api_class_name}/detail', ':version.${controller.class_name}/detail', 'GET')->allowCrossDomain();
+Route::rule(':version/${api_class_name}/add', ':version.${controller.class_name}/add', 'POST')->allowCrossDomain();
+Route::rule(':version/${api_class_name}/edit', ':version.${controller.class_name}/edit', 'PUT')->allowCrossDomain();
+Route::rule(':version/${api_class_name}/delete', ':version.${controller.class_name}/delete', 'DELETE')->allowCrossDomain();
+
