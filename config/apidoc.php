@@ -7,9 +7,9 @@ return [
     // 版权申明
     'copyright'          => 'Powered By hg-code',
     // 设置可选版本
-    'versions'           => [
-        ['title'=>'V1.0','folder'=>'app\controller\v1'],
-        ['title'=>'V2.0','folder'=>'app\controller\v2']
+    'apps'           => [
+        ['title'=>'V1.0','path'=>'app\controller\v1','folder'=>'v1'],
+        ['title'=>'V2.0','path'=>'app\controller\v2','folder'=>'v2']
     ],
     'groups'             => [
         ['title'=>'基础模块','name'=>'base'],
