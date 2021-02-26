@@ -1,10 +1,13 @@
 <?php
-
+/**
+ * dddd
+ */
 
 namespace app\admin\controller;
 
 use app\admin\services\ApiDoc as ApiDocService;
 use app\admin\services\AuthFunction;
+use app\BaseController;
 use app\Request;
 use hg\apidoc\annotation as Apidoc;
 
@@ -13,20 +16,20 @@ use hg\apidoc\annotation as Apidoc;
  * @Apidoc\Title("基础示例")
  * @Apidoc\Group("base")
  */
-class BaseDemo
+class BaseDemo extends BaseController
 {
 
     /**
      * @Apidoc\Title("基础的注释方法")
      * @Apidoc\Desc("最基础的接口注释写法")
-     * @Apidoc\Url("/admin/baseDemo/base")
      * @Apidoc\Method("GET")
      * @Apidoc\Tag("测试 基础")
      * @Apidoc\Header(
      *     "Authorization",
      *     require=true,
      *     desc="Token",
-     *     type="string",
+     *     default="123",
+     *     type="string"
      * )
      * @Apidoc\Param("username", type="string",require=true, desc="用户名" )
      * @Apidoc\Param("password", type="string",require=true, desc="密码" )
@@ -132,7 +135,7 @@ class BaseDemo
      * @Apidoc\Url("/admin/baseDemo/formdata")
      * @Apidoc\Method("POST")
      * @Apidoc\ParamType("formdata")
-     * @Apidoc\Param("name",type="string", require=true,desc="用户名")
+     * @Apidoc\Param("name",type="string", require=true,default="1",desc="用户名")
      * @Apidoc\Param("phone",type="string", require=true,desc="电话")
      * @Apidoc\Returned("res", type="boolean",desc="保存状态")
      */

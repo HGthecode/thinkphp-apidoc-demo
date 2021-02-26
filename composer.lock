@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f19fdfc034b9430562e54dce1cb6c31",
+    "content-hash": "565bc6177a96582e771124e95502354d",
     "packages": [
         {
             "name": "doctrine/annotations",
-            "version": "1.11.1",
+            "version": "1.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "ce77a7ba1770462cd705a91a151b6c3746f9c6ad"
+                "reference": "b17c5014ef81d212ac539f07a1001832df1b6d3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/ce77a7ba1770462cd705a91a151b6c3746f9c6ad",
-                "reference": "ce77a7ba1770462cd705a91a151b6c3746f9c6ad",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/b17c5014ef81d212ac539f07a1001832df1b6d3b",
+                "reference": "b17c5014ef81d212ac539f07a1001832df1b6d3b",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -38,11 +38,6 @@
                 "phpunit/phpunit": "^7.5 || ^9.1.5"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.11.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Common\\Annotations\\": "lib/Doctrine/Common/Annotations"
@@ -83,9 +78,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/annotations/issues",
-                "source": "https://github.com/doctrine/annotations/tree/1.11.1"
+                "source": "https://github.com/doctrine/annotations/tree/1.12.1"
             },
-            "time": "2020-10-26T10:28:16+00:00"
+            "time": "2021-02-21T21:00:45+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -175,16 +170,16 @@
         },
         {
             "name": "hg/apidoc",
-            "version": "v2.1.2",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGthecode/thinkphp-apidoc.git",
-                "reference": "dc5de73f5fa9ed031e2e9e04095f615298a38e73"
+                "reference": "eec9f17c4ba99abf754c3dd22625edf3298d13e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/dc5de73f5fa9ed031e2e9e04095f615298a38e73",
-                "reference": "dc5de73f5fa9ed031e2e9e04095f615298a38e73",
+                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/eec9f17c4ba99abf754c3dd22625edf3298d13e8",
+                "reference": "eec9f17c4ba99abf754c3dd22625edf3298d13e8",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -236,9 +231,9 @@
             ],
             "support": {
                 "issues": "https://github.com/HGthecode/thinkphp-apidoc/issues",
-                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v2.1.2"
+                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v2.2.0"
             },
-            "time": "2021-02-14T13:56:06+00:00"
+            "time": "2021-02-25T13:33:26+00:00"
         },
         {
             "name": "league/flysystem",

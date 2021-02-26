@@ -6,6 +6,10 @@ return [
     'desc'               => '本演示源码地址：https://github.com/HGthecode/thinkphp-apidoc-demo/tree/multiApp',
     // 版权申明
     'copyright'          => 'Powered By hg-code',
+    // 默认请求类型
+    'default_method'=>'POST',
+    // 默认作者
+    'default_author'=>'HG-CODE',
     // 设置可选版本
     'apps'           => [
         ['title'=>'后台管理','path'=>'app\admin\controller','folder'=>'admin'],
@@ -27,12 +31,11 @@ return [
     // 指定公共注释定义的文件地址
     'definitions'        => "app\common\controller\Definitions",
     //指定生成文档的控制器
-    'controllers'        => [
-//        'app\admin\controller\Index',
-//        'app\demo\controller\Index',
-    ],
+    'controllers'        => [],
     // 过滤，不解析的控制器
-    'filter_controllers' => [],
+    'filter_controllers' => [
+//        'app\admin\controller\BaseDemo'
+    ],
     // 缓存配置
     'cache'              => [
         // 是否开启缓存
@@ -68,11 +71,15 @@ return [
         '__cal',
     ],
     // 统一的请求响应体，仅显示在文档提示中
-    'responses'          => '{
-    "code":"状态码",
-    "message":"操作描述",
-    "data":"业务数据",
-}',
+    'responses'=>[
+        // 是否显示在响应体中
+        'show_responses'=>true,
+        'data'=>[
+            ['name'=>'code','desc'=>'状态码','type'=>'int'],
+            ['name'=>'message','desc'=>'操作描述','type'=>'string'],
+            ['name'=>'data','desc'=>'业务数据','main'=>true,'type'=>'object'],
+        ]
+    ],
     // md文档
     'docs'              => [
         'menu_title' => '开发文档',

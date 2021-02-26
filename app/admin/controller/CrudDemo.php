@@ -19,6 +19,7 @@ class CrudDemo
     /**
      * @Apidoc\Title("查询分页列表")
      * @Apidoc\Desc("根据查询条件获取分页列表")
+     * @Apidoc\Tag("后台 前台")
      * @Apidoc\Author("HG")
      * @Apidoc\Url("/admin/crudDemo/list")
      * @Apidoc\Method("GET")
@@ -41,6 +42,7 @@ class CrudDemo
     /**
      * @Apidoc\Title("根据id查询信息")
      * @Apidoc\Author("HG")
+     * @Apidoc\Tag("后台 前台")
      * @Apidoc\Url("/admin/crudDemo/info")
      * @Apidoc\Method("GET")
      * @Apidoc\Param( ref="getInfo")
@@ -59,6 +61,7 @@ class CrudDemo
     /**
      * @Apidoc\Title("新增")
      * @Apidoc\Author("HG")
+     * @Apidoc\Tag("后台")
      * @Apidoc\Url("/admin/crudDemo/add")
      * @Apidoc\Method("POST")
      * @Apidoc\Param( ref="app\model\Roster\getInfoById",withoutField="id,create_time,update_time")
@@ -77,6 +80,7 @@ class CrudDemo
     /**
      * @Apidoc\Title("编辑")
      * @Apidoc\Author("HG")
+     * @Apidoc\Tag("后台")
      * @Apidoc\Url("/admin/crudDemo/edit")
      * @Apidoc\Method("PUT")
      * @Apidoc\Param( ref="app\model\Roster\getInfoById",withoutField="create_time,update_time")
@@ -93,6 +97,7 @@ class CrudDemo
     /**
      * @Apidoc\Title("删除")
      * @Apidoc\Author("HG")
+     * @Apidoc\Tag("后台")
      * @Apidoc\Url("/admin/crudDemo/delete")
      * @Apidoc\Method("DELETE")
      * @Apidoc\Param("id",type="int",require=true,desc="唯一id")
