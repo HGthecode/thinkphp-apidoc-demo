@@ -24,6 +24,7 @@ class BaseDemo extends BaseController
      * @Apidoc\Desc("最基础的接口注释写法")
      * @Apidoc\Method("GET")
      * @Apidoc\Tag("测试 基础")
+     * @Apidoc\Url("/admin/baseDemo/base")
      * @Apidoc\Header(
      *     "Authorization",
      *     require=true,
@@ -154,6 +155,19 @@ class BaseDemo extends BaseController
      */
     public function upload(){
         return show(0,"",true);
+    }
+
+    /**
+     * @Apidoc\Title ("路由带参")
+     * @Apidoc\Url("/admin/baseDemo/routeParam/:name/<age>")
+     * @Apidoc\Method("GET")
+     * @Apidoc\Param("name",type="string",desc="姓名")
+     * @Apidoc\Param("age",type="string",desc="年龄")
+     * @Apidoc\ParamType("route")
+     * @Apidoc\Returned("name", type="string",desc="路由参数")
+     */
+    public function routeParam($name,$age){
+        return show(0,"",['name'=>$name,'age'=>$age]);
     }
 
 

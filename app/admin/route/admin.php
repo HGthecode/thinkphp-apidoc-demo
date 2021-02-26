@@ -10,6 +10,8 @@ Route::get('baseDemo/ref', 'BaseDemo/ref')->allowCrossDomain();
 Route::post('baseDemo/formdata', 'BaseDemo/formdata')->allowCrossDomain();
 Route::post('baseDemo/upload', 'BaseDemo/upload')->allowCrossDomain();
 
+Route::get('baseDemo/routeParam/:name/<age>', 'BaseDemo/routeParam')->allowCrossDomain();
+
 
 Route::rule('testCrud/pagelist', 'TestCrud/pagelist', 'GET')->allowCrossDomain();
 Route::rule('testCrud/detail', 'TestCrud/detail', 'GET')->allowCrossDomain();
