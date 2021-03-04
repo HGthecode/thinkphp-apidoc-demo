@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@master
     - name: Build
       uses: actions/setup-node@master
-    - run: tar -zcvf release.tgz app config docs extend public route runtime template view composer.json composer.lock
+    - run: tar -zcvf release.tgz app config docs extend public route runtime template view composer.json composer.lock think
     - name: Create Release
       id: create_release
       uses: actions/create-release@master
@@ -40,7 +40,7 @@ jobs:
         password: ${{ secrets.SERVER_PASSWORD }}
         port: ${{ secrets.SERVER_PORT }}
         script:
-          cd /www/wwwroot/test && 
+          cd /www/wwwroot/apidoc.hg-code.com && 
           wget https://github.com/HGthecode/thinkphp-apidoc-demo/releases/latest/download/release.tgz -O release.tgz && 
           tar zxvf release.tgz
-          composer install
+          composer update
