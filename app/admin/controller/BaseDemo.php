@@ -29,7 +29,6 @@ class BaseDemo extends BaseController
      *     "Authorization",
      *     require=true,
      *     desc="Token",
-     *     default="123",
      *     type="string"
      * )
      * @Apidoc\Param("username", type="string",require=true, desc="用户名" )
