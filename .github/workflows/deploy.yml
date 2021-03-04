@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@master
     - name: Build
       uses: actions/setup-node@master
-    - run: tar -zcvf release.tgz app config docs extend public route runtime template view composer.json composer.lock
+    - run: tar -zcvf release.tgz app config docs extend public route runtime template view composer.json composer.lock think
     - name: Create Release
       id: create_release
       uses: actions/create-release@master
