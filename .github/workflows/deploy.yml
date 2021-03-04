@@ -42,5 +42,5 @@ jobs:
         script:
           cd /www/wwwroot/apidoc.hg-code.com && 
           wget https://github.com/HGthecode/thinkphp-apidoc-demo/releases/latest/download/release.tgz -O release.tgz && 
-          tar zxvf release.tgz
+          tar zxvf release.tgz &&
           composer update
