@@ -29,4 +29,8 @@ return [
     'error_message'    => '页面错误！请稍后再试～',
     // 显示错误信息
     'show_error_msg'   => false,
+    // 默认分页起始页
+    'defaultPage'      => 1,
+    // 默认分页条数
+    'defaultLimit'     => 20
 ];

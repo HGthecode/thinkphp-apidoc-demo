@@ -60,6 +60,6 @@ class ExceptionHandle extends Handle
         return show(-1, $e->getMessage(), [], $httpStatus);
 
         // 其他错误交给系统处理
-//        return parent::render($request, $e);
+        return parent::render($request, $e);
     }
 }
