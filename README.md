@@ -3,7 +3,7 @@ ThinkPHP ApiDoc Demo
 
 本项目为 ThinkPHP ApiDoc 多应用演示源码
 
-
+项目演示地址 [https://apidoc.demo.hg-code.com/apidoc/](https://apidoc.demo.hg-code.com/apidoc/)
 
 ## 相关链接
 
