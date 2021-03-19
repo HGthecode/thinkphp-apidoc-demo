@@ -3,7 +3,7 @@ return [
     // 文档标题
     'title'              => 'APi接口文档',
     // 文档描述
-    'desc'               => '本演示源码地址：https://github.com/HGthecode/thinkphp-apidoc-demo/tree/multiApp',
+    'desc'               => '本演示源码地址：https://github.com/HGthecode/thinkphp-apidoc-demo',
     // 版权申明
     'copyright'          => 'Powered By hg-code',
     // 默认请求类型
