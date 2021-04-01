@@ -170,16 +170,16 @@
         },
         {
             "name": "hg/apidoc",
-            "version": "v2.4.0",
+            "version": "v2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGthecode/thinkphp-apidoc.git",
-                "reference": "b61f91453628683d4a9ab487cb8ed0384fac82de"
+                "reference": "db07561a4f1ae08908f6e84a6d537e950cf1d3d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/b61f91453628683d4a9ab487cb8ed0384fac82de",
-                "reference": "b61f91453628683d4a9ab487cb8ed0384fac82de",
+                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/db07561a4f1ae08908f6e84a6d537e950cf1d3d8",
+                "reference": "db07561a4f1ae08908f6e84a6d537e950cf1d3d8",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -231,9 +231,9 @@
             ],
             "support": {
                 "issues": "https://github.com/HGthecode/thinkphp-apidoc/issues",
-                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v2.4.0"
+                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v2.4.2"
             },
-            "time": "2021-03-18T08:02:09+00:00"
+            "time": "2021-04-01T15:59:07+00:00"
         },
         {
             "name": "league/flysystem",

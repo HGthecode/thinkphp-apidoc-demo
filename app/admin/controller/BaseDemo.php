@@ -235,6 +235,20 @@ class BaseDemo extends BaseController
         return show(0,"通过 notApi 标记该方法不解析");
     }
 
+    /**
+     * 各种字段类型测试
+     * @Apidoc\Param("string",type="string",desc="字符串")
+     * @Apidoc\Param("int",type="int",desc="整形")
+     * @Apidoc\Param("boolean",type="boolean",desc="布尔")
+     * @Apidoc\Param("date",type="date",desc="日期")
+     * @Apidoc\Param("time",type="time",desc="时间")
+     * @Apidoc\Param("datetime",type="datetime",desc="日期时间")
+     *
+     */
+    public function fieldType(){
+        return show(0,"1");
+    }
+
 
 
 
