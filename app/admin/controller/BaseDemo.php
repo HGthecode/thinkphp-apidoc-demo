@@ -34,7 +34,7 @@ class BaseDemo extends BaseController
      * )
      */
     public function base(){
-        return show(0,"",["id"=>1]);
+        return show(0,"",1);
     }
 
     /**
@@ -247,6 +247,19 @@ class BaseDemo extends BaseController
      */
     public function fieldType(){
         return show(0,"1");
+    }
+
+    /**
+     * 多个请求类型
+     * @Apidoc\Url("/admin/baseDemo/multipleMethod")
+     * @Apidoc\Method("GET,POST,PUT,DELETE")
+     * @Apidoc\Param("name",type="string",desc="姓名")
+     * @Apidoc\Param("age",type="int",desc="年龄")
+     *
+     */
+    public function multipleMethod(Request $request){
+        $params = $request->param();
+        return show(0,"",$params);
     }
 
 

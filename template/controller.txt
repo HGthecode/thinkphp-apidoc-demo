@@ -16,7 +16,7 @@ class ${controller.class_name} extends BaseController
 
     /**
      * @Apidoc\Title("查询分页列表")
-     * @Apidoc\Url("${api_url}/pagelist")
+     * @Apidoc\Url("${api_url}/list")
      * @Apidoc\Method("GET")
      ${query.annotation}
      * @Apidoc\Param(ref="pagingParam")

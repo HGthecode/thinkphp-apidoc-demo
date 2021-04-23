@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "588af4b840abab733c8a82ce470f3f89",
+    "content-hash": "7e2a3ca6fbf1721374a4f41734a66113",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -170,16 +170,16 @@
         },
         {
             "name": "hg/apidoc",
-            "version": "v2.4.4",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGthecode/thinkphp-apidoc.git",
-                "reference": "8a83bb48d5cbe6bf283658e3391b743941a81cb1"
+                "reference": "8326c8cd781a39c200563834b460cb68f20f8325"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/8a83bb48d5cbe6bf283658e3391b743941a81cb1",
-                "reference": "8a83bb48d5cbe6bf283658e3391b743941a81cb1",
+                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/8326c8cd781a39c200563834b460cb68f20f8325",
+                "reference": "8326c8cd781a39c200563834b460cb68f20f8325",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -231,9 +231,9 @@
             ],
             "support": {
                 "issues": "https://github.com/HGthecode/thinkphp-apidoc/issues",
-                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v2.4.4"
+                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v2.5.0"
             },
-            "time": "2021-04-07T07:25:35+00:00"
+            "time": "2021-04-23T02:03:24+00:00"
         },
         {
             "name": "league/flysystem",

@@ -18,7 +18,7 @@ return [
             'folder'=>'demo',
             'items'=>[
                 ['title'=>'V1.0','path'=>'app\demo\controller\v1','folder'=>'v1'],
-                ['title'=>'V2.0','path'=>'app\demo\controller\v2','folder'=>'v2']
+                ['title'=>'V2.0','path'=>'app\demo\controller\v2','folder'=>'v2','password'=>'123']
             ]
         ]
     ],
@@ -65,7 +65,7 @@ return [
     ],
     // 统一的请求参数Parameters
     'parameters'=>[
-        ['name'=>'code','type'=>'string','desc'=>'全局code'],
+//        ['name'=>'code','type'=>'string','desc'=>'全局code'],
     ],
     // 统一的请求响应体
     'responses'=>[
@@ -77,6 +77,7 @@ return [
     'docs'              => [
         'menu_title' => '开发文档',
         'menus'      => [
+            ['title'=>'关于Apidoc','path'=>'docs/readme'],
             ['title'=>'md语法示例','path'=>'docs/Use'],
             [
                 'title'=>'HTTP响应编码',
