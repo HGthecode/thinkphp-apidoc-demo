@@ -10,6 +10,7 @@ use app\admin\services\AuthFunction;
 use app\BaseController;
 use app\Request;
 use hg\apidoc\annotation as Apidoc;
+use hg\apidoc\parseApi\ParseAnnotation;
 
 
 /**
@@ -34,7 +35,8 @@ class BaseDemo extends BaseController
      * )
      */
     public function base(){
-        return show(0,"",1);
+        $res=(new ParseAnnotation())->renderApiData("admin");
+        return show(0,"",$res);
     }
 
     /**
@@ -58,6 +60,24 @@ class BaseDemo extends BaseController
      *          @Apidoc\Returned ("group_id",type="int",desc="组id"),
      *     )
      * )
+     *
+     * @Apidoc\Param("array_array_object",type="array",childrenType="array",desc="多层数组类型嵌套",
+     *     @Apidoc\Param("arrObj",type="object",desc="多层数组子节点",
+     *          @Apidoc\Param("name",type="string",desc="名称"),
+     *          @Apidoc\Param("code",type="string",desc="编码"),
+     *     ),
+     * )
+     * @Apidoc\Param("array_object_object",type="array",childrenType="object",desc="多层对象类型嵌套",
+     *     @Apidoc\Param("arrObj",type="object",desc="多层数组子节点",
+     *          @Apidoc\Param("name",type="string",desc="名称"),
+     *          @Apidoc\Param("code",type="string",desc="编码"),
+     *     ),
+     * )
+     * @Apidoc\Param("array_object",type="array",childrenType="object",desc="对象数组类型",
+     *     @Apidoc\Param("name",type="string",desc="名称"),
+     *     @Apidoc\Param("code",type="string",desc="编码"),
+     * )
+     * @Apidoc\Param("array_string",type="array",childrenType="boolean",desc="数组")
      */
     public function completeParams(){
         return [
@@ -261,9 +281,6 @@ class BaseDemo extends BaseController
         $params = $request->param();
         return show(0,"",$params);
     }
-
-
-
 
 
 

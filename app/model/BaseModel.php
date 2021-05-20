@@ -4,9 +4,7 @@
 namespace app\model;
 
 use think\Model;
-use hg\apidoc\annotation\Field;
 use hg\apidoc\annotation\WithoutField;
-use hg\apidoc\annotation\AddField;
 
 class BaseModel extends Model
 {
