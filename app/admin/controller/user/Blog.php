@@ -4,6 +4,10 @@
 namespace app\admin\controller\user;
 use hg\apidoc\annotation as Apidoc;
 
+/**
+ * 多级路由测试
+ * @package app\admin\controller\user
+ */
 class Blog
 {
     /**

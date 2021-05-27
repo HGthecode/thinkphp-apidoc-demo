@@ -65,7 +65,7 @@ return [
     'headers'=>[
         ['name'=>'Authorization','type'=>'string','require'=>true,'desc'=>'登录票据'],
     ],
-
+//  'controller_auto_search'=>true,
     // 统一的请求参数Parameters
     'parameters'=>[
 //        ['name'=>'code','type'=>'string','desc'=>'全局code'],
