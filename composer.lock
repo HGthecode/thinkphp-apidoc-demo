@@ -176,12 +176,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGthecode/thinkphp-apidoc.git",
-                "reference": "8bf6e2200c28463da9be2d91f69d006f4909c4eb"
+                "reference": "9b033e5927fd15039478ae6ecb39eae826db0557"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/8bf6e2200c28463da9be2d91f69d006f4909c4eb",
-                "reference": "8bf6e2200c28463da9be2d91f69d006f4909c4eb",
+                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/9b033e5927fd15039478ae6ecb39eae826db0557",
+                "reference": "9b033e5927fd15039478ae6ecb39eae826db0557",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -192,7 +192,7 @@
             },
             "require": {
                 "doctrine/annotations": "^1.6",
-                "php": ">=7.0.0",
+                "php": ">=7.1.0",
                 "symfony/class-loader": "~3.2.0"
             },
             "type": "think-extend",
@@ -236,7 +236,7 @@
                 "issues": "https://github.com/HGthecode/thinkphp-apidoc/issues",
                 "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v2.6.0"
             },
-            "time": "2021-05-27T13:31:41+00:00"
+            "time": "2021-05-27T13:50:16+00:00"
         },
         {
             "name": "league/flysystem",
