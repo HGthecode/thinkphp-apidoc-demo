@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e2a3ca6fbf1721374a4f41734a66113",
+    "content-hash": "b461d0fb6714d4a5eff713f7611b9b95",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -172,16 +172,16 @@
         },
         {
             "name": "hg/apidoc",
-            "version": "v2.5.3",
+            "version": "v2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGthecode/thinkphp-apidoc.git",
-                "reference": "f34e227a88eb47b0a9127314aeba3bc4d28ef7ee"
+                "reference": "8bf6e2200c28463da9be2d91f69d006f4909c4eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/f34e227a88eb47b0a9127314aeba3bc4d28ef7ee",
-                "reference": "f34e227a88eb47b0a9127314aeba3bc4d28ef7ee",
+                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/8bf6e2200c28463da9be2d91f69d006f4909c4eb",
+                "reference": "8bf6e2200c28463da9be2d91f69d006f4909c4eb",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -192,6 +192,7 @@
             },
             "require": {
                 "doctrine/annotations": "^1.6",
+                "php": ">=7.0.0",
                 "symfony/class-loader": "~3.2.0"
             },
             "type": "think-extend",
@@ -233,9 +234,9 @@
             ],
             "support": {
                 "issues": "https://github.com/HGthecode/thinkphp-apidoc/issues",
-                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v2.5.3"
+                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v2.6.0"
             },
-            "time": "2021-05-20T12:23:40+00:00"
+            "time": "2021-05-27T13:31:41+00:00"
         },
         {
             "name": "league/flysystem",

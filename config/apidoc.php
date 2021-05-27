@@ -10,6 +10,8 @@ return [
     'default_method'=>'GET',
     // 默认作者
     'default_author'=>'HG-CODE',
+    // 允许跨域访问
+    'allowCrossDomain'=>true,
     // 设置可选版本
     'apps'           => [
         ['title'=>'后台管理','path'=>'app\admin\controller','folder'=>'admin'],
@@ -63,6 +65,7 @@ return [
     'headers'=>[
         ['name'=>'Authorization','type'=>'string','require'=>true,'desc'=>'登录票据'],
     ],
+
     // 统一的请求参数Parameters
     'parameters'=>[
 //        ['name'=>'code','type'=>'string','desc'=>'全局code'],

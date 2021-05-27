@@ -25,7 +25,6 @@ class BaseDemo extends BaseController
      * @Apidoc\Desc("最基础的接口注释写法")
      * @Apidoc\Method("GET")
      * @Apidoc\Tag("测试 基础")
-     * @Apidoc\Url("/admin/baseDemo/base")
      * @Apidoc\Param("username", type="abc",require=true, desc="用户名" )
      * @Apidoc\Param("password", type="string",require=true, desc="密码" )
      * @Apidoc\Param("phone", type="string",require=true, desc="手机号" )
@@ -42,7 +41,6 @@ class BaseDemo extends BaseController
     /**
      * 直接定义多层结构的参数
      * @Apidoc\Desc("仅在一个方法注释中定义多层数据结构的参数")
-     * @Apidoc\Url("/admin/baseDemo/completeParams")
      * @Apidoc\Param("info",type="object",desc="信息",
      *     @Apidoc\Param ("name",type="string",desc="姓名"),
      *     @Apidoc\Param ("sex",type="string",desc="性别"),

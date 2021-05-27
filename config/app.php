@@ -32,5 +32,6 @@ return [
     // 默认分页起始页
     'defaultPage'      => 1,
     // 默认分页条数
-    'defaultLimit'     => 20
+    'defaultLimit'     => 20,
+    'controller_auto_search' => true,
 ];
