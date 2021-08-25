@@ -2,8 +2,7 @@
 namespace ${controller.namespace};
 
 use hg\apidoc\annotation as Apidoc;
-use app\BaseController;
-use app\Request;
+use app\common\controller\ApiBase;
 use ${service.use_path} as ${service.use_alias};
 use ${validate.use_path} as ${validate.use_alias};
 
@@ -11,7 +10,7 @@ use ${validate.use_path} as ${validate.use_alias};
  * @Apidoc\Title("${title}")
  * ${api_group}
  */
-class ${controller.class_name} extends BaseController
+class ${controller.class_name} extends ApiBase
 {
 
     /**
@@ -23,13 +22,13 @@ class ${controller.class_name} extends BaseController
      * @Apidoc\Returned(ref="pagingParam")
      * @Apidoc\Returned("data", type="array", ref="${model.use_path}\getList",withoutField="${list.withoutField}")
      */
-    public function pagelist(Request $request){
+    public function pagelist(){
 
-        $page = $request->param("pageIndex",config('app.defaultPage'));
-        $limit = $request->param("pageSize",config('app.defaultLimit'));
-        $param = $request->param();
+        $page = $this->request->param("pageIndex",config('app.defaultPage'));
+        $limit = $this->request->param("pageSize",config('app.defaultLimit'));
+        $param = $this->request->param();
         $res = (new ${service.use_alias}())->getPageList($page,$limit,$param);
-        return show(0,null,$res);
+        return $this->show(0,null,$res);
     }
 
     /**
@@ -39,10 +38,10 @@ class ${controller.class_name} extends BaseController
      * @Apidoc\Param("${main_key.field}",type="${main_key.type}",require=true,desc="${main_key.desc}")
      * @Apidoc\Returned(ref="${model.use_path}\getInfoById",withoutField="${detail.withoutField}")
      */
-    public function detail(Request $request){
-        $${main_key.field} = $request->param("${main_key.field}");
+    public function detail(){
+        $${main_key.field} = $this->request->param("${main_key.field}");
         $res = (new ${service.use_alias}())->getInfoById($${main_key.field});
-        return show(0,"",$res);
+        return $this->show(0,"",$res);
     }
 
     /**
@@ -52,13 +51,13 @@ class ${controller.class_name} extends BaseController
      * @Apidoc\Param(ref="${model.use_path}\getInfoById",withoutField="${add.withoutField}")
      * @Apidoc\Returned(ref="${model.use_path}\getInfoById",withoutField="${detail.withoutField}")
      */
-    public function add(Request $request){
+    public function add(){
         $validate = new ${validate.use_alias}();
         $validate->goCheck("add");
 
-        $params = $request->post();
+        $params = $this->request->post();
         $res = (new ${service.use_alias}())->add($params);
-        return show(0,"",$res);
+        return $this->show(0,"",$res);
     }
 
     /**
@@ -68,13 +67,13 @@ class ${controller.class_name} extends BaseController
      * @Apidoc\Param( ref="${model.use_path}\getInfoById",withoutField="${edit.withoutField}")
      * @Apidoc\Returned("data",type="boolean",desc="修改状态")
      */
-    public function edit(Request $request){
+    public function edit(){
         $validate = new ${validate.use_alias}();
         $validate->goCheck("edit");
 
-        $params = $request->post();
+        $params = $this->request->post();
         $res = (new ${service.use_alias}())->update($params);
-        return show(0,"",$res);
+        return $this->show(0,"",$res);
     }
 
     /**
@@ -84,13 +83,13 @@ class ${controller.class_name} extends BaseController
      * @Apidoc\Param("${main_key.field}",type="${main_key.type}",require=true,desc="${main_key.desc}")
      * @Apidoc\Returned("data",type="boolean",desc="删除状态")
      */
-    public function delete(Request $request){
+    public function delete(){
         $validate = new ${validate.use_alias}();
         $validate->goCheck("delete");
 
-        $${main_key.field} = $request->param("${main_key.field}");
+        $${main_key.field} = $this->request->param("${main_key.field}");
         $res = (new ${service.use_alias}())->delete($${main_key.field});
-        return show(0,"",$res);
+        return $this->show(0,"",$res);
     }
 
 }

@@ -1,0 +1,25 @@
+<?php
+return [
+    'apidoc.config.headers.Authorization' => '身份票据',
+    'apidoc.config.responses.code' => '响应编码',
+    'apidoc.config.responses.message' => '操作描述',
+    'apidoc.config.responses.data' => '业务数据',
+    'apidoc.api.lang.title'  => '多语言Api',
+    'apidoc.controller.lang.title'  => '多语言示例',
+    'apidoc.api.lang.desc'  => '切换语言查看本接口体验多语言的能力',
+    'apidoc.api.lang.number'  => '数字',
+    'apidoc.api.lang.name'  => '姓名',
+    'apidoc.api.lang.sex'  => '性别',
+    'apidoc.apps.admin' => '后台管理',
+    'apidoc.doc.about' => "关于Apidoc",
+    'apidoc.group.nouse' => "无用模块",
+    'apidoc.groups.base' => "基础模块",
+    'apidoc.groups.demo' => "示例模块",
+    'apidoc.groups.test' => "测试模块",
+    'apidoc.table.lang.title' => "标题",
+    'apidoc.table.lang.name' => "姓名",
+    'apidoc.table.lang.sex' => "性别",
+    'apidoc.table.lang.age' => "年龄",
+    'apidoc.api.lang.account'  => '账号',
+    'apidoc.api.lang.tags' => "多语言,示例"
+];

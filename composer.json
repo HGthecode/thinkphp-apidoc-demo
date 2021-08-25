@@ -13,39 +13,23 @@
         {
             "name": "liu21st",
             "email": "liu21st@gmail.com"
-        },
-        {
-            "name": "yunwuxin",
-            "email": "448901948@qq.com"
-        }        
+        }
     ],
     "require": {
-        "php": ">=7.1.0",
-        "topthink/framework": "^6.0.0",
-        "topthink/think-orm": "^2.0",
-        "topthink/think-multi-app": "^1.0",
-        "hg/apidoc": "^2.6"
+        "php": ">=5.6.0",
+        "topthink/framework": "5.1.*",
+        "hg/apidoc": "dev-master"
     },
-    "require-dev": {
-        "symfony/var-dumper": "^4.2",
-        "topthink/think-trace":"^1.0"
-    },
-    
+
     "autoload": {
         "psr-4": {
-            "app\\": "app"
-        },
-        "psr-0": {
-            "": "extend/"
+            "app\\": "application"
         }
+    },
+    "extra": {
+        "think-path": "thinkphp"
     },
     "config": {
         "preferred-install": "dist"
-    },
-    "scripts": {
-        "post-autoload-dump": [
-            "@php think service:discover",
-            "@php think vendor:publish"
-        ]
     }
 }

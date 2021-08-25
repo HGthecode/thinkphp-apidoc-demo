@@ -2,7 +2,7 @@ name: Auto Deploy
 on:
   push:
     branches:
-      - master
+      - tp5
     paths-ignore:
       - README.md
       - LICENSE
@@ -15,12 +15,12 @@ jobs:
         uses: AEnterprise/rsync-deploy@v1.0
         env:
           DEPLOY_KEY: ${{ secrets.SERVER_KEY }}
-          ARGS: -avz --delete --exclude='*.env' --exclude='runtime/' --exclude='public/images/'
+          ARGS: -avz --delete --exclude='*.env' --exclude='runtime/' --exclude='public/images/' --exclude='config/database.php'
           SERVER_PORT: ${{ secrets.SERVER_PORT }}
           FOLDER: ./ 
           SERVER_IP: ${{ secrets.SERVER_HOST }} 
           USERNAME: ${{ secrets.SERVER_USERNAME }}
-          SERVER_DESTINATION: /www/wwwroot/apidoc.demo/
+          SERVER_DESTINATION: /www/wwwroot/apidoc.tp5/
       - name: Execute Script
         uses: appleboy/ssh-action@master
         with:
@@ -28,5 +28,5 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_KEY }}
           script: |
-            cd /www/wwwroot/apidoc.demo/ 
+            cd /www/wwwroot/apidoc.tp5/ 
             composer update

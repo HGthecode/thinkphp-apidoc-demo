@@ -1,0 +1,25 @@
+<?php
+return [
+    'apidoc.config.headers.Authorization' => 'Authorization',
+    'apidoc.config.responses.code' => 'Code',
+    'apidoc.config.responses.message' => 'Message',
+    'apidoc.config.responses.data' => 'Data',
+    'apidoc.api.lang.title'  => 'Lang Api',
+    'apidoc.controller.lang.title'  => 'Lang Demo',
+    'apidoc.api.lang.desc'  => 'Switch languages to view the ability of this interface to experience multiple languages',
+    'apidoc.api.lang.number'  => 'Number',
+    'apidoc.api.lang.name'  => 'Name',
+    'apidoc.api.lang.sex'  => 'Sex',
+    'apidoc.apps.admin' => 'Admin Manage',
+    'apidoc.doc.about' => "About Apidoc",
+    'apidoc.group.nouse' => "Useless",
+    'apidoc.groups.base' => "Base",
+    'apidoc.groups.demo' => "Demo",
+    'apidoc.groups.test' => "Test",
+    'apidoc.table.lang.title' => "Title",
+    'apidoc.table.lang.name' => "Name",
+    'apidoc.table.lang.sex' => "Sex",
+    'apidoc.table.lang.age' => "Age",
+    'apidoc.api.lang.account'  => 'Account',
+    'apidoc.api.lang.tags' => "Lang,Demo"
+];

@@ -16,7 +16,7 @@ class ${service.class_name}
     public function getPageList($page,$limit,$param){
         $where = ${query.where}
         $res = (new ${model.use_alias}())->where($where)->field('${list.field}')
-            ->paginate(['page' => $page,'list_rows'=> $limit])
+            ->paginate($limit, false, ['page' => $page])
             ->toArray();
         return $res;
     }
@@ -30,7 +30,7 @@ class ${service.class_name}
      * @throws \think\db\exception\ModelNotFoundException
      */
     public function getInfoById($${main_key.field}){
-        $res = (new ${model.use_alias}())->withoutField('${detail.withoutField}')->where('${main_key.field}',$${main_key.field})->find();
+        $res = (new ${model.use_alias}())->where('${main_key.field}',$${main_key.field})->find();
         return $res;
     }
 

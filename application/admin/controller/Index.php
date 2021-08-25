@@ -1,0 +1,42 @@
+<?php
+
+
+namespace app\admin\controller;
+
+use app\common\controller\ApiBase;
+use hg\apidoc\annotation as Apidoc;
+use think\facade\App;
+use think\facade\Lang;
+
+/**
+ * 多级分组
+ * Class Index
+ * @Apidoc\Group("subv2")
+ * @package app\admin\controller
+ */
+class Index extends ApiBase
+{
+    /**
+     * @Apidoc\Title("多级分组")
+     * @Apidoc\Tag("测试 基础 Admin")
+     * @Apidoc\Param("username", type="abc",require=true, desc="用户名" )
+     * @Apidoc\Param("password", type="string",require=true, desc="密码" )
+     * @Apidoc\Param("phone", type="string",require=true, desc="手机号" )
+     * @Apidoc\Param("sex", type="int",default="1",desc="性别" )
+     * @Apidoc\Returned("data", type="array", desc="返回数据",
+     *     @Apidoc\Returned("id", type="boolean", desc="id"),
+     * )
+     */
+    public function base(){
+        $a = App::getAppPath();
+        $b = explode("\\", $a);
+        $c= "";
+        for ($i = count($b)-1; $i>0 ;$i--){
+            if ($b[$i]){
+                $c = $b[$i];
+                break;
+            }
+        }
+        return show(0,"",$c);
+    }
+}
