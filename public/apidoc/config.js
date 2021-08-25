@@ -14,16 +14,7 @@ const config = {
     // 接口响应超时时间
     TIMEOUT: 30000,
     // 多个可切换的host
-    HOSTS: [
-      {
-        title: "TP6演示",
-        host: "http://demo.apidoc.com",
-      },
-      {
-        title: "TP5演示",
-        host: "http://tp5.apidoc.com",
-      },
-    ],
+    HOSTS: [],
   },
   // 多语言
   LANG: [
