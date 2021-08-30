@@ -52,7 +52,9 @@ abstract class BaseController
 
     // 初始化
     protected function initialize()
-    {}
+    {
+        $this->app->loadLangPack($this->app->lang->getLangSet());
+    }
 
     /**
      * 验证数据

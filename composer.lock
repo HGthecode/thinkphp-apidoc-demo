@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b461d0fb6714d4a5eff713f7611b9b95",
+    "content-hash": "8fc1f78ada648f550b10394d440acf72",
     "packages": [
         {
             "name": "doctrine/annotations",
-            "version": "1.13.1",
+            "version": "1.13.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f"
+                "reference": "5b668aef16090008790395c02c893b1ba13f7e08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f",
-                "reference": "e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/5b668aef16090008790395c02c893b1ba13f7e08",
+                "reference": "5b668aef16090008790395c02c893b1ba13f7e08",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -80,9 +80,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/annotations/issues",
-                "source": "https://github.com/doctrine/annotations/tree/1.13.1"
+                "source": "https://github.com/doctrine/annotations/tree/1.13.2"
             },
-            "time": "2021-05-16T18:07:53+00:00"
+            "time": "2021-08-05T19:00:23+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -172,16 +172,16 @@
         },
         {
             "name": "hg/apidoc",
-            "version": "v2.6.0",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGthecode/thinkphp-apidoc.git",
-                "reference": "9b033e5927fd15039478ae6ecb39eae826db0557"
+                "reference": "41d3505ddd9ed6dd85eb6e3961cbf4b61d6483c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/9b033e5927fd15039478ae6ecb39eae826db0557",
-                "reference": "9b033e5927fd15039478ae6ecb39eae826db0557",
+                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/41d3505ddd9ed6dd85eb6e3961cbf4b61d6483c3",
+                "reference": "41d3505ddd9ed6dd85eb6e3961cbf4b61d6483c3",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -225,18 +225,19 @@
             "keywords": [
                 "apidoc",
                 "api文档",
+                "markdown",
+                "php api文档",
                 "php接口文档",
-                "swagger",
                 "thinkphp",
                 "接口文档",
                 "注释生成",
-                "自动生成"
+                "自动生成api"
             ],
             "support": {
                 "issues": "https://github.com/HGthecode/thinkphp-apidoc/issues",
-                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v2.6.0"
+                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v3.0.0"
             },
-            "time": "2021-05-27T13:50:16+00:00"
+            "time": "2021-08-30T03:49:43+00:00"
         },
         {
             "name": "league/flysystem",
@@ -752,16 +753,16 @@
         },
         {
             "name": "topthink/framework",
-            "version": "v6.0.7",
+            "version": "v6.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/framework.git",
-                "reference": "db8fe22520a9660dd5e4c87e304034ac49e39270"
+                "reference": "4789343672aef06d571d556da369c0e156609bce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/framework/zipball/db8fe22520a9660dd5e4c87e304034ac49e39270",
-                "reference": "db8fe22520a9660dd5e4c87e304034ac49e39270",
+                "url": "https://api.github.com/repos/top-think/framework/zipball/4789343672aef06d571d556da369c0e156609bce",
+                "reference": "4789343672aef06d571d556da369c0e156609bce",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -817,9 +818,9 @@
             ],
             "support": {
                 "issues": "https://github.com/top-think/framework/issues",
-                "source": "https://github.com/top-think/framework/tree/v6.0.7"
+                "source": "https://github.com/top-think/framework/tree/v6.0.8"
             },
-            "time": "2021-01-25T14:48:29+00:00"
+            "time": "2021-04-27T00:41:08+00:00"
         },
         {
             "name": "topthink/think-helper",

@@ -10,6 +10,12 @@ use hg\apidoc\annotation\Returned;
 
 class ApiDoc
 {
+    /**
+     * @Returned("account", desc="账号")
+     */
+    public function info(){
+
+    }
 
     /**
      * @param("sex", type="int",require=true,desc="性别")
@@ -51,4 +57,6 @@ class ApiDoc
     public function getUserData(){
 
     }
+
+
 }

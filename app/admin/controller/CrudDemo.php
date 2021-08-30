@@ -19,14 +19,16 @@ class CrudDemo
     /**
      * @Apidoc\Title("查询分页列表")
      * @Apidoc\Desc("根据查询条件获取分页列表")
-     * @Apidoc\Tag("后台 前台")
+     * @Apidoc\Tag("后台,前台")
      * @Apidoc\Author("HG")
      * @Apidoc\Url("/admin/crudDemo/list")
      * @Apidoc\Method("GET")
      * @Apidoc\Param("keyword", type="string", desc="关键词" )
      * @Apidoc\Param( ref="pagingParam")
-     * @Apidoc\Returned(ref="pagingParam")
-     * @Apidoc\Returned("data", type="array", ref="app\model\Roster\getList",withoutField="delete_time")
+     * @Apidoc\Returned("data", type="array",childrenType="object", desc="返回数据",replaceGlobal="true",
+     *      @Apidoc\Returned("total",type="int",desc="总条数"),
+     *      @Apidoc\Returned("list", type="array",ref="app\model\Roster\getList",withoutField="delete_time",desc="列表数据"),
+     * )
      */
     public function list(Request $request){
         $keyword = $request->param("keyword");
@@ -42,7 +44,7 @@ class CrudDemo
     /**
      * @Apidoc\Title("根据id查询信息")
      * @Apidoc\Author("HG")
-     * @Apidoc\Tag("后台 前台")
+     * @Apidoc\Tag("后台,前台")
      * @Apidoc\Url("/admin/crudDemo/info")
      * @Apidoc\Method("GET")
      * @Apidoc\Param( ref="getInfo")

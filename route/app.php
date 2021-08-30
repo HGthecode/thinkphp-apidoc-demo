@@ -14,4 +14,6 @@ Route::get('think', function () {
     return 'hello,ThinkPHP6!';
 });
 
-Route::get('hello/:name', 'index/hello');
+Route::get('/', function () {
+    return '<script> window.location.href = "/apidoc/"</script>';
+});

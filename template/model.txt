@@ -3,7 +3,7 @@ namespace ${model.namespace};
 
 use think\Model;
 
-class ${model.class_name} extends BaseModel
+class ${model.class_name}Model extends BaseModel
 {
-
+    protected $name = '${model.table_name}';
 }

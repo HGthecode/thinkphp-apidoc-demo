@@ -1,27 +1,54 @@
 <?php
 use think\facade\Route;
 
-Route::get('baseDemo/base', 'BaseDemo/Base')->allowCrossDomain();
-Route::get('baseDemo/definitions', 'BaseDemo/definitions')->allowCrossDomain();
-Route::get('baseDemo/service', 'BaseDemo/service')->allowCrossDomain();
-Route::get('baseDemo/model', 'BaseDemo/model')->allowCrossDomain();
-Route::get('baseDemo/tree', 'BaseDemo/tree')->allowCrossDomain();
-Route::get('baseDemo/ref', 'BaseDemo/ref')->allowCrossDomain();
-Route::post('baseDemo/formdata', 'BaseDemo/formdata')->allowCrossDomain();
-Route::post('baseDemo/upload', 'BaseDemo/upload')->allowCrossDomain();
 
-Route::get('baseDemo/routeParam/:name/<age>', 'BaseDemo/routeParam')->allowCrossDomain();
-Route::get('baseDemo/autoApi', 'BaseDemo/autoApi')->allowCrossDomain();
-Route::get('baseDemo/notResponses', 'BaseDemo/notResponses')->allowCrossDomain();
-Route::get('baseDemo/fieldType', 'BaseDemo/fieldType')->allowCrossDomain();
+Route::group('baseDemo', function(){
+    Route::get('base','BaseDemo/base');
+    Route::post('completeParams','BaseDemo/completeParams');
+    Route::post('tree','BaseDemo/tree');
+    Route::post('formdata','BaseDemo/formdata');
+    Route::post('upload','BaseDemo/upload');
+    Route::get('routeParam/:name/<age>','BaseDemo/routeParam');
+    Route::get('autoApi','BaseDemo/autoApi');
+    Route::get('notResponses','BaseDemo/notResponses');
+    Route::get('notApi','BaseDemo/notApi');
+    Route::get('multipleMethod','BaseDemo/multipleMethod');
+    Route::post('multipleMethod','BaseDemo/multipleMethod');
+    Route::put('multipleMethod','BaseDemo/multipleMethod');
+    Route::delete('multipleMethod','BaseDemo/multipleMethod');
+    Route::patch('multipleMethod','BaseDemo/multipleMethod');
+})->allowCrossDomain();
 
 
-Route::rule('testCrud/pagelist', 'TestCrud/pagelist', 'GET')->allowCrossDomain();
-Route::rule('testCrud/detail', 'TestCrud/detail', 'GET')->allowCrossDomain();
-Route::rule('testCrud/add', 'TestCrud/add', 'POST')->allowCrossDomain();
-Route::rule('testCrud/edit', 'TestCrud/edit', 'PUT')->allowCrossDomain();
-Route::rule('testCrud/delete', 'TestCrud/delete', 'DELETE')->allowCrossDomain();
+Route::group('debugDemo', function(){
+    Route::post('login','DebugDemo/login');
+    Route::get('event','DebugDemo/event');
+    Route::post('mock','DebugDemo/mock');
+    Route::get('eventTest','DebugDemo/eventTest');
+    Route::post('eventFormToken','DebugDemo/eventFormToken');
+})->allowCrossDomain();
 
+Route::group('langDemo', function(){
+    Route::get('lang','LangDemo/lang');
+})->allowCrossDomain();
+
+
+Route::group('mdDemo', function(){
+    Route::get('mdDesc','MdDemo/mdDesc');
+    Route::get('mdRefDesc','MdDemo/mdRefDesc');
+    Route::get('mdDoc','MdDemo/mdDoc');
+    Route::get('mdApiFieldDesc','MdDemo/mdApiFieldDesc');
+    Route::get('refMdApiFieldDesc','MdDemo/refMdApiFieldDesc');
+})->allowCrossDomain();
+
+
+Route::group('refDemo', function(){
+    Route::get('definitions','RefDemo/definitions');
+    Route::get('service','RefDemo/service');
+    Route::get('model','RefDemo/model');
+    Route::get('tree','RefDemo/tree');
+    Route::get('ref','RefDemo/ref');
+})->allowCrossDomain();
 
 
 Route::group('crudDemo', function(){
@@ -32,3 +59,9 @@ Route::group('crudDemo', function(){
     Route::delete('delete','CrudDemo/delete');
 })->allowCrossDomain();
 
+Route::group('test', function(){
+    Route::get('index','Test/index');
+    Route::get('getFormToken','Test/getFormToken');
+})->allowCrossDomain();
+
+Route::get('user.Blog/index','user.Blog/index')->allowCrossDomain();
