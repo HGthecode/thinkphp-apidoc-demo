@@ -45,6 +45,7 @@ const config = {
         "common.page.404": "404-未知页面",
         "common.notdata": "暂无数据",
         "common.group": "分组",
+        "common.notGroup": "未分组",
         "common.currentApp": "当前应用",
         "lang.change.confirm.title": "您确认切换语言为 {langTitle} 吗？",
         "lang.change.confirm.content": "确认后将刷新页面，并回到首页",
@@ -123,6 +124,7 @@ const config = {
         "common.page.404": "404-page",
         "common.notdata": "No Data",
         "common.group": "Group",
+        "common.notGroup": "Not Group",
         "common.currentApp": "Current App",
         "lang.change.confirm.title": "Are you switch the language to {langTitle} ?",
         "lang.change.confirm.content":
