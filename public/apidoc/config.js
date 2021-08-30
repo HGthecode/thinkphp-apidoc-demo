@@ -122,7 +122,7 @@ const config = {
         "common.page.404": "404-page",
         "common.notdata": "No Data",
         "common.group": "Group",
-        "common.notGroup": "未分组",
+        "common.notGroup": "Not Group",
         "common.currentApp": "Current App",
         "lang.change.confirm.title": "Are you switch the language to {langTitle} ?",
         "lang.change.confirm.content":

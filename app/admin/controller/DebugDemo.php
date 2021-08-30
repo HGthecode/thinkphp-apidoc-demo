@@ -44,7 +44,7 @@ class DebugDemo extends BaseController
 
 
     /**
-     * @Apidoc\Title ("用户登录")
+     * @Apidoc\Title ("用户登录事件")
      * @Apidoc\Desc("通过调试时事件，自动将password转md5，请求响应后设置全局请求头参数的例子")
      * @Apidoc\Method("POST")
      * @Apidoc\Url("/admin/debugDemo/login")
@@ -65,7 +65,7 @@ class DebugDemo extends BaseController
 
 
     /**
-     * @Apidoc\Title ("表单token验证")
+     * @Apidoc\Title ("表单token验证事件")
      * @Apidoc\Desc("在接口请求前通过事件发起一个请求，将该请求响应参数作为该接口的请求头/参数")
      * @Apidoc\Url("/admin/debugDemo/eventFormToken")
      * @Apidoc\Method("POST")
