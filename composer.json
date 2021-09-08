@@ -24,9 +24,8 @@
         "topthink/framework": "^6.0.0",
         "topthink/think-orm": "^2.0",
         "topthink/think-multi-app": "^1.0",
-        "hg/apidoc": "^3.0"
+        "hg/apidoc": "dev-master"
     },
-  
     "require-dev": {
         "symfony/var-dumper": "^4.2",
         "topthink/think-trace":"^1.0"
