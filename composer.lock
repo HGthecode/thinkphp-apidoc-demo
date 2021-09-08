@@ -176,12 +176,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGthecode/thinkphp-apidoc.git",
-                "reference": "92b916d61cda860836047457b03435d03f7d61cf"
+                "reference": "d531bc148b223949f02b0cb99829d20bbe581838"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/92b916d61cda860836047457b03435d03f7d61cf",
-                "reference": "92b916d61cda860836047457b03435d03f7d61cf",
+                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/d531bc148b223949f02b0cb99829d20bbe581838",
+                "reference": "d531bc148b223949f02b0cb99829d20bbe581838",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -236,9 +236,9 @@
             ],
             "support": {
                 "issues": "https://github.com/HGthecode/thinkphp-apidoc/issues",
-                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/master"
+                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v3.0.1"
             },
-            "time": "2021-08-25T05:55:05+00:00"
+            "time": "2021-09-08T02:43:38+00:00"
         },
         {
             "name": "psr/cache",
