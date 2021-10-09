@@ -15,7 +15,7 @@ jobs:
         uses: AEnterprise/rsync-deploy@v1.0
         env:
           DEPLOY_KEY: ${{ secrets.SERVER_KEY }}
-          ARGS: -avz --delete --exclude='*.env' --exclude='runtime/' --exclude='vendor/' --exclude='public/images/' --exclude='config/database.php --exclude='composer.lock'
+          ARGS: -avz --delete --exclude='*.env' --exclude='runtime/' --exclude='public/images/'
           SERVER_PORT: ${{ secrets.SERVER_PORT }}
           FOLDER: ./ 
           SERVER_IP: ${{ secrets.SERVER_HOST }} 
