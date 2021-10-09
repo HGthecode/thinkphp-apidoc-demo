@@ -6,6 +6,8 @@ namespace app\common\controller;
 use hg\apidoc\annotation\Param;
 use hg\apidoc\annotation\Returned;
 use hg\apidoc\annotation\Header;
+use hg\apidoc\annotation\Before;
+use hg\apidoc\annotation\After;
 
 /**
  * NotParse
@@ -38,4 +40,15 @@ class Definitions
      * @header("Authorization",type="string",require=true,desc="身份票据")
      */
     public function auth(){}
+
+    /**
+     * @Before(event="setParam",key="hhh",value="555")
+     * @Before(event="ajax",url="/admin/test/getFormToken",method="GET",contentType="appicateion-json",
+     *    @Before(event="setParam",key="abc",value="params.phone"),
+     *    @Before(event="setParam",key="cc",value="123456"),
+     *    @After(event="setHeader",key="X-CSRF-TOKEN",value="res.data.data")
+     * )
+     * @After(event="setGlobalParam",key="hhh",value="res.data.data.name")
+     */
+    public function formTokenEvent(){}
 }

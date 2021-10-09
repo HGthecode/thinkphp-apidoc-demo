@@ -25,6 +25,7 @@ Route::group('debugDemo', function(){
     Route::get('event','DebugDemo/event');
     Route::post('mock','DebugDemo/mock');
     Route::get('eventTest','DebugDemo/eventTest');
+    Route::get('eventRef','DebugDemo/eventRef');
     Route::post('eventFormToken','DebugDemo/eventFormToken');
 })->allowCrossDomain();
 
@@ -65,3 +66,7 @@ Route::group('test', function(){
 })->allowCrossDomain();
 
 Route::get('user.Blog/index','user.Blog/index')->allowCrossDomain();
+
+Route::group('crudTest', function(){
+    Route::get('list','CrudTest/list');
+})->allowCrossDomain();

@@ -77,11 +77,17 @@ class MdDemo extends BaseController
      * 字段描述使用md语法
      * @Apidoc\Url("/admin/mdDemo/mdApiFieldDesc")
      * @Apidoc\Method("GET")
-     * @Apidoc\Param("username", type="abc",require=true, desc="用户名" ,md="
+     * @Apidoc\Param("username", type="string",require=true, desc="用户名" ,md="
 ### username字段说明
 ```javascript
   var a = 1;
 ```
+    ")
+    * @Apidoc\Returned ("username1", type="string",require=true, desc="用户名" ,md="
+    ### username字段说明
+    ```javascript
+    var a = 2;
+    ```
     ")
      */
     public function mdApiFieldDesc(Request $request){
@@ -95,6 +101,7 @@ class MdDemo extends BaseController
      * @Apidoc\Url("/admin/mdDemo/refMdApiFieldDesc")
      * @Apidoc\Method("GET")
      * @Apidoc\Param("name", type="string",require=true, desc="姓名，点击查看->",mdRef="/docs/apiDesc.md#name字段" )
+     * @Apidoc\Returned ("name1", type="string",require=true, desc="姓名，点击查看->",mdRef="/docs/apiDesc.md#name字段" )
      */
     public function refMdApiFieldDesc(Request $request){
         $params = $request->param();

@@ -31,11 +31,8 @@ class DebugDemo extends BaseController
 //     * @Apidoc\Param("phone",type="string",desc="电话")
 //     * @Apidoc\Param("myValue",type="string",desc="我的临时请求头参数")
 //     * @Apidoc\Before(event="setParam",key="jjjjj",value="6666")
-//     * @Apidoc\Before(event="ajax",url="/admin/test/getFormToken",method="GET",contentType="appicateion-json",
-//     *    @Apidoc\Before(event="setParam",key="abc",value="params.phone"),
-//     *    @Apidoc\Before(event="setParam",key="cc",value="123456"),
-//     *    @Apidoc\After(event="setHeader",key="X-CSRF-TOKEN",value="res.data.data")
-//     * )
+//     * @Apidoc\Before(ref="formTokenEvent")
+//     * @Apidoc\After (ref="formTokenEvent")
 //     */
 //    public function eventTest(Request $request){
 //        $params = $request->param();
@@ -51,7 +48,7 @@ class DebugDemo extends BaseController
      * @Apidoc\Param("username",type="string",desc="用户名")
      * @Apidoc\Param("password",type="string",desc="登录密码")
      * @Apidoc\Before(event="handleParam",key="md5",value="params.password")
-     * @Apidoc\After(event="setGlobalHeader",key="Authorization",value="res.data.data.token",desc="用户登录Toekn")
+     * @Apidoc\After(event="setGlobalHeader",key="token",value="res.data.data.token",desc="用户登录Toekn",appKey="admin")
      */
     public function login(Request $request){
         $params = $request->param();
@@ -72,8 +69,7 @@ class DebugDemo extends BaseController
      * @Apidoc\Param("name",type="string",desc="姓名")
      * @Apidoc\Param("phone",type="string",desc="电话")
      * @Apidoc\Before(event="ajax",url="/admin/test/getFormToken",method="GET",contentType="appicateion-json",
-     *    @Apidoc\Before(event="setParam",key="key",value="params.phone"),
-     *    @Apidoc\Before(event="setParam",key="abc",value="123456"),
+     *    @Apidoc\Before(event="setParam",value="params."),
      *    @Apidoc\After(event="setHeader",key="X-CSRF-TOKEN",value="res.data.data")
      * )
      */
@@ -99,6 +95,20 @@ class DebugDemo extends BaseController
      * @Apidoc\After(event="setGlobalHeader",key="myGHeader",value="res.data.data.abc",desc="我的全局Header参数")
      */
     public function event(Request $request){
+        $params = $request->param();
+        return show(0,"",$params);
+    }
+
+    /**
+     * @Apidoc\Title ("引入通用调试时事件")
+     * @Apidoc\Url("/admin/debugDemo/eventRef")
+     * @Apidoc\Param("name",type="string",desc="姓名")
+     * @Apidoc\Param("phone",type="string",desc="电话")
+     * @Apidoc\Before(event="setParam",key="abc",value="6666")
+     * @Apidoc\Before(ref="formTokenEvent")
+     * @Apidoc\After (ref="formTokenEvent")
+     */
+    public function eventRef(Request $request){
         $params = $request->param();
         return show(0,"",$params);
     }
