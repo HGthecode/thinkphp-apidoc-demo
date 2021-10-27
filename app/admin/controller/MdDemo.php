@@ -56,6 +56,25 @@ class MdDemo extends BaseController
         return show(0,"",$params);
     }
 
+    /**
+     * 自定义md参数或响应结果
+     * @Apidoc\Desc("md分别自定义请求参数及返回参数")
+     * @Apidoc\Url("/admin/mdDemo/mdParams")
+     * @Apidoc\Method("GET")
+     * @Apidoc\ParamMd(" ## 这里可以使用Markdown语法，定义请求参数内容
+    ```json
+    {
+       name:""
+     }
+    ```")
+     * @Apidoc\Param ("name",type="string",desc="姓名")
+     * @Apidoc\ReturnedMd (ref="/docs/mdReturned.md")
+     */
+    public function mdParams(Request $request){
+        $params = $request->param();
+        return show(0,"",$params);
+    }
+
 
     /**
      * 自定义文档内容
