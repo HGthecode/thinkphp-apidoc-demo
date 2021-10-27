@@ -20,7 +20,12 @@
         "topthink/framework": "5.1.*",
         "hg/apidoc": "dev-master"
     },
-
+    "repositories": {
+        "hg": {
+            "type": "path",
+            "url": "E:/OpenSource/Apidoc/thinkphp-apidoc"
+        }
+    },
     "autoload": {
         "psr-4": {
             "app\\": "application"

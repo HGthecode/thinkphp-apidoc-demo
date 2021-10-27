@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5fd852e204245017b948b50849411f2a",
+    "content-hash": "23c3a8f714218937da4a8a71595ede20",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -18,13 +18,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/annotations/zipball/5b668aef16090008790395c02c893b1ba13f7e08",
                 "reference": "5b668aef16090008790395c02c893b1ba13f7e08",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "doctrine/lexer": "1.*",
@@ -96,13 +90,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/lexer/zipball/e864bbf5904cb8f5bb334f99209b48018522f042",
                 "reference": "e864bbf5904cb8f5bb334f99209b48018522f042",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0"
@@ -173,29 +161,16 @@
         {
             "name": "hg/apidoc",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/HGthecode/thinkphp-apidoc.git",
-                "reference": "d531bc148b223949f02b0cb99829d20bbe581838"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/HGthecode/thinkphp-apidoc/zipball/d531bc148b223949f02b0cb99829d20bbe581838",
-                "reference": "d531bc148b223949f02b0cb99829d20bbe581838",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "type": "path",
+                "url": "E:/OpenSource/Apidoc/thinkphp-apidoc",
+                "reference": "a3d5085b3643358b983298835089d065bb1a09fd"
             },
             "require": {
                 "doctrine/annotations": "^1.6",
                 "php": ">=7.1.0",
                 "symfony/class-loader": "~3.2.0"
             },
-            "default-branch": true,
             "type": "think-extend",
             "extra": {
                 "think": {
@@ -212,7 +187,6 @@
                     "hg\\apidoc\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -224,9 +198,9 @@
             ],
             "description": "thinkphp API文档自动生成",
             "keywords": [
+                "Markdown",
                 "apidoc",
                 "api文档",
-                "markdown",
                 "php api文档",
                 "php接口文档",
                 "thinkphp",
@@ -234,11 +208,9 @@
                 "注释生成",
                 "自动生成api"
             ],
-            "support": {
-                "issues": "https://github.com/HGthecode/thinkphp-apidoc/issues",
-                "source": "https://github.com/HGthecode/thinkphp-apidoc/tree/v3.0.1"
-            },
-            "time": "2021-09-08T02:43:38+00:00"
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "psr/cache",
@@ -252,13 +224,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/php-fig/cache/zipball/d11b50ad223250cf17b86e38383413f5a6764bf8",
                 "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
@@ -307,13 +273,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/class-loader/zipball/e192d96b15fdd168bdb1c91001d26c93ba4af482",
                 "reference": "e192d96b15fdd168bdb1c91001d26c93ba4af482",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "php": ">=5.5.9"
@@ -485,5 +445,5 @@
         "php": ">=5.6.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
