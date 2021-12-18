@@ -11,7 +11,7 @@ return [
     // 允许跨域访问
     'allowCrossDomain'=>true,
     // 是否禁止接口调试
-    'notDebug'=>true,
+    'notDebug'=>false,
     // 设置可选版本
     'apps'           => [
         [

@@ -128,6 +128,8 @@ class DebugDemo extends BaseController
      * @Apidoc\Param("text",type="string",mock="@cparagraph")
      * @Apidoc\Param("image",type="string",mock="@image('200x100')")
      * @Apidoc\Param("color",type="string",mock="@color")
+     * @Apidoc\Param("phone",type="string",mock="@phone")
+     * @Apidoc\Param("idcard",type="string",mock="@idcard")
      */
     public function mock(Request $request){
         $params = $request->param();
