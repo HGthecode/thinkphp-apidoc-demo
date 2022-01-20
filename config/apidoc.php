@@ -1,4 +1,118 @@
 <?php
+
+// 表字段可选的字段类型
+$tableFieldTypes = ["int", "tinyint", "integer", "float", "decimal", "char", "varchar", "blob", "text", "point"];
+// 表字段可选的验证规则
+$tableFieldCheckOptions = [
+    ['label'=>'必填','value'=>'require','message'=>'缺少必要参数{$item.field}'],
+    ['label'=>'数字','value'=>'number','message'=>'{$item.field}字段类型为数字'],
+    ['label'=>'整数','value'=>'integer','message'=>'{$item.field}为整数'],
+    ['label'=>'布尔','value'=>'boolean','message'=>'{$item.field}为布尔值'],
+];
+// 主表默认字段
+$tableDefaultRows = [
+    [
+        'field'=> 'id',
+        'desc'=> '唯一id',
+        'type'=> 'int',
+        'length'=> 11,
+        'default'=> '',
+        'not_null'=> true,
+        'main_key'=> true,
+        'incremental'=> true,
+        'query'=> false,
+        'list'=> true,
+        'detail'=> true,
+        'add'=> false,
+        'edit'=> true
+    ],
+    [
+        'field'=> 'create_time',
+        'desc'=> '创建时间',
+        'type'=> 'int',
+        'length'=> 10,
+        'default'=> '',
+        'not_null'=> false,
+        'main_key'=> false,
+        'incremental'=> false,
+    ],
+    [
+        'field'=> 'update_time',
+        'desc'=> '更新时间',
+        'type'=> 'int',
+        'length'=> 10,
+        'default'=> '',
+        'not_null'=> false,
+        'main_key'=> false,
+        'incremental'=> false,
+    ],
+    [
+        'field'=> 'delete_time',
+        'desc'=> '删除时间',
+        'type'=> 'int',
+        'length'=> 10,
+        'default'=> '',
+        'not_null'=> false,
+        'main_key'=> false,
+        'incremental'=> false,
+    ]
+];
+
+// crud的表配置自定义列
+$crudTableColumns=[
+    [
+        'title'=>'验证',
+        'field'=>'check',
+        'type'=>'select',
+        'width'=>180,
+        'props'=>[
+            'placeholder'=>'请输入',
+            'mode' =>'multiple',
+            'maxTagCount'=>1,
+            'options'=>$tableFieldCheckOptions
+        ],
+    ],
+    [
+        'title'=>'查询',
+        'field'=>'query',
+        'type'=>'checkbox',
+        'width'=>60
+    ],
+    [
+        'title'=>'列表',
+        'field'=>'list',
+        'type'=>'checkbox',
+        'width'=>60
+    ],
+    [
+        'title'=>'明细',
+        'field'=>'detail',
+        'type'=>'checkbox',
+        'width'=>60
+    ],
+    [
+        'title'=>'新增',
+        'field'=>'add',
+        'type'=>'checkbox',
+        'width'=>60
+    ],
+    [
+        'title'=>'编辑',
+        'field'=>'edit',
+        'type'=>'checkbox',
+        'width'=>60
+    ]
+];
+// 模型名规则
+$modelNameRules=[
+    ['pattern'=>'^[A-Z]{1}([a-zA-Z0-9]|[._]){2,19}$','message'=>'模型文件名错误，请输入大写字母开头的字母+数字，长度2-19的组合']
+];
+// 表名规则
+$tableNameRules=[
+    ['pattern'=>'^[a-z]{1}([a-z0-9]|[_]){2,19}$','message'=>'表名错误，请输入小写字母开头的字母+数字/下划线，长度2-19的组合']
+];
+
+
 return [
     // 文档标题
     'title'              => 'APi接口文档',
@@ -97,5 +211,203 @@ return [
                 ],
             ]
     ],
+    'generator' =>[
+        [
+            'title'=>'创建Crud',
+            'enable'=>true,
+            'middleware'=>[
+                \app\common\middleware\CreateCrudMiddleware::class
+            ],
+            'form' =>[
+                'colspan'=>3,
+                'items'=>[
+                    [
+                        'title'=>'控制器标题',
+                        'field'=>'controller_title',
+                        'type'=>'input'
+                    ],
+                ]
+            ],
+            'files'=>[
+                [
+                    'path'=>'app\${app[0].folder}\controller\${app[1].folder}',
+                    'namespace'=>'app\${app[0].folder}\controller\${app[1].folder}',
+                    'template'=>'template\crud\controller.tpl',
+                    'name'=>'controller',
+                    'rules'=>[
+                        ['required'=>true,'message'=>'请输入控制器文件名'],
+                        ['pattern'=>'^[A-Z]{1}([a-zA-Z0-9]|[._]){2,19}$','message'=>'请输入正确的目录名'],
+                    ]
+                ],
+                [
+                    'name'=>'service',
+                    'path'=>'app\${app[0].folder}\services',
+                    'template'=>'template\crud\service.tpl',
+                ],
+                [
+                    'name'=>'validate',
+                    'path'=>'app\${app[0].folder}\validate',
+                    'template'=>'template\crud\validate.tpl',
+                ],
+                [
+                    'name'=>'route',
+                    'path'=>'app\${app[0].folder}\route\${app[0].folder}.php',
+                    'template'=>'template\crud\route.tpl',
+                ],
+            ],
+            'table'=>[
+                'field_types'=>$tableFieldTypes,
+                'items'=>[
+                    [
+                        'title'=>'数据表',
+                        'namespace'=>'app\model',
+                        'path'=>"app\model",
+                        'template'=>"template\crud\model.tpl",
+                        'model_rules'=>$modelNameRules,
+                        'table_rules'=>$tableNameRules,
+                        'columns'=>$crudTableColumns,
+                        'default_fields'=>$tableDefaultRows,
+                        'default_values'=>[
+                            'type'=>'varchar',
+                            'length'=>255,
+                            'list'=>true,
+                            'detail'=>true,
+                            'add'=>true,
+                            'edit'=>true,
+                        ],
+                    ],
+                ]
+            ]
+        ],
+        [
+            'title'=>'创建一对多关联Crud',
+            'middleware'=>[
+                \app\common\middleware\CreateRelationMiddleware::class
+            ],
+            'form' =>[
+                'colspan'=>4,
+                'items'=>[
+                    [
+                        'title'=>'控制器标题',
+                        'field'=>'controller_title',
+                        'type'=>'input',
+                    ],
+                    [
+                        'title'=>'关联字段',
+                        'field'=>'relation_field',
+                        'type'=>'input',
+                        'props'=>[
+                            'placeholder'=>'副表关联主表的字段，如:info_id'
+                        ],
+                        'rules'=>[
+                            // 必填的验证
+                            ['required'=>true,'message'=>'请输入控制器文件名'],
+                        ]
+                    ],
+                ]
+            ],
+            'files'=>[
+                [
+                    'path'=>'app\${app[0].folder}\controller\${app[1].folder}',
+                    'namespace'=>'app\${app[0].folder}\controller\${app[1].folder}',
+                    'template'=>'template\relation\controller.tpl',
+                    'name'=>'controller',
+                    'rules'=>[
+                        ['required'=>true,'message'=>'请输入控制器文件名'],
+                        ['pattern'=>'^[A-Z]{1}([a-zA-Z0-9]|[._]){2,19}$','message'=>'请输入正确的目录名'],
+                    ]
+                ],
+                [
+                    'name'=>'service',
+                    'path'=>'app\${app[0].folder}\services',
+                    'template'=>'template\relation\service.tpl',
+                ],
+                [
+                    'name'=>'validate',
+                    'path'=>'app\${app[0].folder}\validate',
+                    'template'=>'template\relation\validate.tpl',
+                ],
+                [
+                    'name'=>'route',
+                    'path'=>'app\${app[0].folder}\route\${app[0].folder}.php',
+                    'template'=>'template\relation\route.tpl',
+                ],
+            ],
+            'table'=>[
+                'field_types'=>$tableFieldTypes,
+                'items'=>[
+                    [
+                        'title'=>'主表',
+                        'desc'=>'表注释必填，以便生成关联接口的名称，如：文章',
+                        'namespace'=>'app\model',
+                        'path'=>"app\model",
+                        'template'=>"template\\relation\model.tpl",
+                        'model_rules'=>$modelNameRules,
+                        'table_rules'=>$tableNameRules,
+                        'columns'=>$crudTableColumns,
+                        'default_fields'=>$tableDefaultRows,
+                        'default_values'=>[
+                            'type'=>'varchar',
+                            'length'=>255,
+                            'list'=>true,
+                            'detail'=>true,
+                            'add'=>true,
+                            'edit'=>true,
+                        ],
+                    ],
+                    [
+                        'title'=>'副表',
+                        'desc'=>'表注释必填，以便生成关联接口的名称，如：评论。必须存在与上方所填关联字段相同的字段，如:info_id',
+                        'namespace'=>'app\model',
+                        'path'=>"app\model",
+                        'template'=>"template\\relation\model_sub.tpl",
+                        'model_rules'=>$modelNameRules,
+                        'table_rules'=>$tableNameRules,
+                        'columns'=>[
+                            [
+                                'title'=>'新增',
+                                'field'=>'add',
+                                'type'=>'checkbox',
+                                'width'=>60
+                            ],
+                            [
+                                'title'=>'编辑',
+                                'field'=>'edit',
+                                'type'=>'checkbox',
+                                'width'=>60
+                            ]
+                        ],
+                        'default_fields'=>[
+                            [
+                                'field'=> 'id',
+                                'desc'=> '唯一id',
+                                'type'=> 'int',
+                                'length'=> 11,
+                                'default'=> '',
+                                'not_null'=> true,
+                                'main_key'=> true,
+                                'incremental'=> true,
+                                'query'=> false,
+                                'list'=> true,
+                                'detail'=> true,
+                                'add'=> false,
+                                'edit'=> true
+                            ],
+                        ],
+                        'default_values'=>[
+                            'type'=>'varchar',
+                            'length'=>255,
+                            'list'=>true,
+                            'detail'=>true,
+                            'add'=>true,
+                            'edit'=>true,
+                        ],
+                    ]
+
+                ]
+            ]
+        ]
+
+    ]
 
 ];

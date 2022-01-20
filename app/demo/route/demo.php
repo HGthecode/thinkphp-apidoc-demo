@@ -5,9 +5,11 @@ use think\facade\Route;
 
 Route::rule(':version/testRest/pagelist', ':version.TestRest/pagelist', 'GET')->allowCrossDomain();
 Route::rule(':version/testRest', ':version.TestRest/detail', 'GET')->allowCrossDomain();
-Route::rule(':version/testRest', ':version.TestRest/add', 'POST')->allowCrossDomain();
+//Route::rule(':version/testRest', ':version.TestRest/add', 'POST')->allowCrossDomain();
 Route::rule(':version/testRest', ':version.TestRest/edit', 'PUT')->allowCrossDomain();
 Route::rule(':version/testRest', ':version.TestRest/delete', 'DELETE')->allowCrossDomain();
+
+Route::post(":version/testRest",':version.TestRest/add');
 
 
 

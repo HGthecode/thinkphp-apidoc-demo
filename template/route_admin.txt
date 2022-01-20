@@ -1,7 +1,0 @@
-Route::group('${api_class_name}', function(){
-    Route::get('list','${controller.class_name}/pagelist');
-    Route::get('detail','${controller.class_name}/detail');
-    Route::post('add','${controller.class_name}/add');
-    Route::put('edit','${controller.class_name}/edit');
-    Route::delete('delete','${controller.class_name}/delete');
-})->allowCrossDomain();

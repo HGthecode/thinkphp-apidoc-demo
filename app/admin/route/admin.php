@@ -4,6 +4,7 @@ use think\facade\Route;
 
 Route::group('baseDemo', function(){
     Route::get('base','BaseDemo/base');
+    Route::post('base','BaseDemo/base');
     Route::post('completeParams','BaseDemo/completeParams');
     Route::post('tree','BaseDemo/tree');
     Route::post('formdata','BaseDemo/formdata');
