@@ -23,8 +23,16 @@ class Http extends Handle
             return response($e->getMessage(), $e->getStatusCode());
         }
 
+        if(method_exists($e, "getStatusCode")) {
+            $httpStatus = $e->getStatusCode();
+        }else{
+            $httpStatus = 500;
+        }
+
+        return show(-1, $e->getMessage(), [], $httpStatus);
+
         // 其他错误交给系统处理
-        return parent::render($e);
+//        return parent::render($e);
     }
 
 }

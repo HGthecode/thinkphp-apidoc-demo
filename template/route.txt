@@ -1,7 +1,0 @@
-Route::group('/${app[0].folder}/${api_class_name}', function(){
-    Route::get('list','${app[0].folder}/${controller.class_name}/pagelist');
-    Route::get('detail','${app[0].folder}/${controller.class_name}/detail');
-    Route::post('add','${app[0].folder}/${controller.class_name}/add');
-    Route::put('edit','${app[0].folder}/${controller.class_name}/edit');
-    Route::delete('delete','${app[0].folder}/${controller.class_name}/delete');
-})->allowCrossDomain();

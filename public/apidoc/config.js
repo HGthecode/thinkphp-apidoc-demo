@@ -2,8 +2,6 @@
 const config = {
   // 标题
   TITLE: "Apidoc",
-  // 根目录
-  PUBLICPATH: "/apidoc/",
   // 缓存配置
   CACHE: {
     // 缓存前缀
@@ -16,6 +14,20 @@ const config = {
     // 多个可切换的host
     HOSTS: [],
   },
+  // 菜单配置
+  MENU: {
+    SHOWURL: false,
+    WIDTH: 300,
+  },
+  // 请求类型的颜色
+  METHODCOLOR: {
+    GET: "#87d068",
+    POST: "#2db7f5",
+    PUT: "#ff9800",
+    DELETE: "#ff4d4f",
+    PATCH: "#802feb",
+  },
+  WITHCREDENTIALS: false,
   // 多语言
   LANG: [
     {
@@ -47,6 +59,10 @@ const config = {
         "common.group": "分组",
         "common.notGroup": "未分组",
         "common.currentApp": "当前应用",
+        "common.please.input": "请输入",
+        "common.file.name": "文件名",
+        "common.appOrVersion": "应用/版本",
+        "common.setSuccess": "设置成功",
         "lang.change.confirm.title": "您确认切换语言为 {langTitle} 吗？",
         "lang.change.confirm.content": "确认后将刷新页面，并回到首页",
         "host.change.confirm.title": "您确认切换Host为 {hostTitle} 吗？",
@@ -77,7 +93,7 @@ const config = {
         "layout.tabs.closeRight": "关闭右侧",
         "layout.tabs.closeAll": "关闭全部",
         "globalParam.title": "全局参数",
-        "globalParam.header": "Header",
+        "globalParam.header": "Headers",
         "globalParam.header.message": "发送请求时，所有接口将自动携带以下Header参数。",
         "globalParam.params": "Params",
         "globalParam.params.message": "发送请求时，所有接口将自动携带以下Params参数。",
@@ -95,6 +111,25 @@ const config = {
         "apiPage.debug.event.clearParam": "清除请求参数",
         "apiPage.debug.event.handleParam": "处理请求参数",
         "apiPage.debug.event.ajax": "发送请求",
+
+        "generator.title": "代码生成",
+        "generator.apps.title": "应用/版本",
+        "generator.group.title": "分组",
+        "generator.table.field": "字段名",
+        "generator.table.desc": "注释",
+        "generator.table.type": "类型",
+        "generator.table.length": "长度",
+        "generator.table.default": "默认值",
+        "generator.table.notNull": "非Null",
+        "generator.table.autoAdd": "自增",
+        "generator.table.mainKey": "主键",
+        "generator.model.name": "模型名",
+        "generator.table.name": "表名",
+        "generator.table.comment": "表注释",
+        "generator.model.name.placeholder": "请输入模型文件名",
+        "generator.table.name.placeholder": "请输入表名",
+        "generator.table.row.error": "第{rows}行，字段名、类型必填",
+        "generator.submitSuccess": "生成成功",
       },
     },
     {
@@ -126,9 +161,13 @@ const config = {
         "common.group": "Group",
         "common.notGroup": "Not Group",
         "common.currentApp": "Current App",
+        "common.please.input": "please Enter",
+        "common.file.name": "File Name",
+        "common.appOrVersion": "App/Version",
+        "common.setSuccess": "Setting Success",
         "lang.change.confirm.title": "Are you switch the language to {langTitle} ?",
         "lang.change.confirm.content":
-          "After confirmation, the page will refresh and return to the home page",
+            "After confirmation, the page will refresh and return to the home page",
         "host.change.confirm.title": "Are you switch the Host to {hostTitle} ?",
         "auth.title": "Authorized Access",
         "auth.input.placeholder": "Please input the access password",
@@ -159,10 +198,10 @@ const config = {
         "globalParam.title": "Global Param",
         "globalParam.header": "Header",
         "globalParam.header.message":
-          "When send a request, all Api will auto carry the following header。",
+            "When send a request, all Api will auto carry the following header。",
         "globalParam.params": "Params",
         "globalParam.params.message":
-          "When send a request, all Api will auto carry the following params。",
+            "When send a request, all Api will auto carry the following params。",
         "globalParam.cancel.confirm": "Are you sure to clear all the above parameters?",
         "globalParam.add": "Add Param",
         "apiPage.json.formatError": "Json Format Error",
@@ -177,6 +216,25 @@ const config = {
         "apiPage.debug.event.clearParam": "ClearParam",
         "apiPage.debug.event.handleParam": "HandleParam",
         "apiPage.debug.event.ajax": "Send A Request",
+
+        "generator.title": "Generator Code",
+        "generator.apps.title": "APP/Version",
+        "generator.group.title": "Group",
+        "generator.table.field": "Field",
+        "generator.table.desc": "Annotation",
+        "generator.table.type": "Type",
+        "generator.table.length": "Length",
+        "generator.table.default": "DefaultValue",
+        "generator.table.notNull": "NotNull",
+        "generator.table.autoAdd": "Incremental",
+        "generator.table.mainKey": "MainKey",
+        "generator.model.name": "ModelName",
+        "generator.table.name": "TableName",
+        "generator.table.comment": "TableAnnotation",
+        "generator.model.name.placeholder": "Please input the model name",
+        "generator.table.name.placeholder": "Please input the table name",
+        "generator.table.row.error": "Field、Type in line {rows} is required",
+        "generator.submitSuccess": "Generator Success",
       },
     },
   ],

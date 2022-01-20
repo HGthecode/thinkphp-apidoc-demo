@@ -19,6 +19,7 @@ Route::group('apidoc', function () {
     Route::get('mdMenus'     , $controller_namespace . 'getMdMenus');
     Route::get('mdDetail'     , $controller_namespace . 'getMdDetail');
     Route::post('verifyAuth'     , $controller_namespace . 'verifyAuth');
+    Route::post('generator'     , $controller_namespace . 'createGenerator');
 })->allowCrossDomain();
 
 
@@ -112,3 +113,4 @@ Route::group('api', function() {
     })->allowCrossDomain();
 
 })->allowCrossDomain();
+
